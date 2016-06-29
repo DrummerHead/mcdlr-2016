@@ -1,0 +1,416 @@
+---
+# -
+#   id: 
+#   title: 
+#   url: 
+#   thumbnail-url: 
+#   github-repo: 
+#   pubdate: 
+#   description: |
+
+-
+  id: responsive-thumbnails
+  title: Responsive Thumbnails
+  url: /responsive-thumbnails/
+  thumbnail-url: responsive-thumbnails.jpg
+  github-repo: https://github.com/DrummerHead/responsive-thumbnails
+  pubdate: 2014-05-05
+  description: >
+    I've always liked the pattern of having floated items in a fluid container. The elements adapt to the viewport's width and just "fall" when there's now enough space... but they do so rather ungracefully, leaving inconsistent white space on the sides.
+
+    Responsive Thumbnails is the answer to this, giving these elements a percentage width based on the size of the element and the available space. Just go ahead and check it for yourself!
+
+    Also, no dependency at all. No jQuery, no problem. And it's rather fast and efficient, dare I say!
+
+-
+  id: aprendio
+  title: aprend.io
+  url: http://aprend.io/
+  thumbnail-url: aprendio.png
+  github-repo: https://github.com/DrummerHead/aprend.io
+  pubdate: 2014-04-12
+  description: >
+    aprend.io is a Front-End course (only HTML &#38; CSS) in Spanish and for free, mainly composed of videos and reference code.
+
+    This is the result of months of content creation, recording, video edition, uploading and site building. It's a way to return to the Internet what the internet has given me (knowledge, power and enjoyment).
+
+-
+  id: color
+  title: Color Hex
+  url: /color/#303b97
+  thumbnail-url: color.png
+  github-repo: https://github.com/DrummerHead/color
+  pubdate: 2014-03-08
+  description: |
+    See a hex color instantly by changing this page’s URL hash.
+
+    That's it! That's all it does.
+
+-
+  id: galNum-galFly
+  title: galNum & galFly
+  url: /galNum-galFly/
+  thumbnail-url: galNum-galFly.png
+  github-repo: https://github.com/DrummerHead/galNum-galFly
+  pubdate: 2014-02-20
+  description: |
+    These two bookmarklets allow you to create galleries on the fly, in two distinct circumstances. Check the page for the details!
+
+    This was a nice project to try out [Grunt](http://gruntjs.com/) and it really delivers!
+
+    Also went mad with [ruby's gsub](http://stackoverflow.com/questions/13458410/)... luckily everything is working nicely now!
+
+-
+  id: font-viewer
+  title: Font Viewer
+  url: /font-viewer/
+  thumbnail-url: font-viewer.png
+  github-repo: https://github.com/DrummerHead/font-viewer
+  pubdate: 2013-11-20
+  description: |
+    If you [get this app](https://github.com/DrummerHead/font-viewer) and [Apple Font Tool Suite](https://developer.apple.com/fonts/), you can run Font Viewer locally on your Mac and have a nifty font comparison and testing tool.
+
+    This online version will only feature common OS X installed fonts. To see all your installed fonts, follow the instructions at the Github repo.
+
+-
+  id: meme
+  title: Meme Generator
+  url: /meme/
+  thumbnail-url: meme.jpg
+  github-repo: https://github.com/DrummerHead/meme/
+  pubdate: 2013-10-22
+  description: |
+    Simple [AngularJS](http://angularjs.org/) app for generating Advice Animals. The particularity is that the text is overlayed on top of the image instead of being part of the binary. This makes editing and creating new memes a breeze.
+
+    Check out [an example](http://mcdlr.com/meme/#/img?url=aHR0cDovL21jZGxyLmNvbS9pL3JlYWxpemF0aW9uLmdpZg&fl=YXJlIHlvdSB0ZWxsaW5nIG1l&sl=SSBjYW4gc2VsZWN0IHRoaXMgdGV4dD8) and feel free to resize the browser like crazy :P
+
+-
+  id: game-of-life
+  title: Conway&#8217;s Game of Life
+  url: /game-of-life/
+  thumbnail-url: game-of-life-glider.png
+  github-repo: https://github.com/DrummerHead/conway-game-of-life
+  pubdate: 2013-02-07
+  description: |
+    &#8220;Conway&#8217;s Game of Life&#8221; is a mathematical game created by John Conway, in an attempt to simplify a mathematical model for a hypothetical machine that could build copies of itself. This game opened up a whole new field of mathematical research, the field of [cellular automata](http://en.wikipedia.org/wiki/Cellular_automata)
+
+    I have always loved this game and thought that it was time to take a shot at recreating it, and that is what I did. Also, no java applet or any nonsense that I always see prompted when you want to play this game online. Profit!
+
+-
+  id: bouncing-rainbow
+  title: Bouncing Rainbow
+  url: /bouncing-rainbow/
+  thumbnail-url: bouncing-rainbow.png
+  github-repo: https://github.com/DrummerHead/bouncing-rainbow
+  pubdate: 2012-10-08
+  description: |
+    My first experiment with [Processing](http://www.processing.org/)! Really simple code with enjoyable results.
+
+    Music with HTML5 Audio element and some javascript for the simple controller (play/pause), original song by [Jellica](http://www.8bitpeoples.com/discography/by/jellica)
+
+    Processing is a really fun and easy to learn language, [why don&#8217;t you try it out?](http://www.processing.org/learning/gettingstarted/) Cheers!
+
+-
+  id: h
+  title: DHompage
+  url: /h/
+  thumbnail-url: dhompage.png
+  github-repo: https://github.com/DrummerHead/DHomepage/
+  pubdate: 2012-06-13
+  description: |
+        DHompage is my personal homepage, and it can be yours too! It basically provides search fields for the most common internet searches and links for your most visited pages.
+
+        Some interesting features include:
+
+        - &#8220;get&#8221; button to aquire clean links to share results
+        - Total responsiveness; can be used on smartphones, tablets, etc
+        - Low brightness theme to avoid eye wear if tab is to be left open
+        - Avoid [Bubbling](http://dontbubble.us/) on Google, by default &#8220;personal results&#8221; are not shown
+        - You are a grownup, by default &#8220;safe search&#8221; is always off
+        - Avoid search trail tracking and country results scoping thanks to full URL formation on the fly
+        - Get Google Image results that show image sizes, useful for Album Cover searches
+        - Search for information about an image, feed its url to &#8220;Google search by Image URL&#8221;
+        - Customize it! Want to link to other places? Want to use other SE? [Fork it and change it](https://github.com/DrummerHead/DHomepage/), it&#8217;s Open Source!
+
+        Want new features or found bugs? [Let me know](https://github.com/DrummerHead/DHomepage/issues)
+
+-
+  id: pangram-ipsum
+  title: Pangram Ipsum
+  url: /pangram-ipsum/
+  thumbnail-url: pangram-ipsum.png
+  github-repo: https://github.com/DrummerHead/pangram-Ipsum
+  pubdate: 2012-05-13
+  description: |
+    Another useful little tool, [filler text](http://en.wikipedia.org/wiki/Filler_text) using [pangrams](http://en.wikipedia.org/wiki/Pangram). In general Lorem Ipsum is used as filler text, but why not Zoidberg? I mean&#8230; why not pangrams? They were created because they use each of the letters of the alphabet once, and that&#8217;s useful for testing typography. But it also generates a more homogenous visual texture.
+
+    In most situations using filler text is bad, because you should know what your content is going to be before visually designing something. But sometimes you&#8217;re creating content architecture, and even thou you know the objectives of each area and the kinds of contents, you haven&#8217;t generated the content yet. I think that in these cases it&#8217;s alright to use filler text :)
+
+    Inside you&#8217;ll find the code ready to be put on source, with paragraphs increasing in word count so you can choose the size that best suits your needs.
+
+    Oh! And if you&#8217;re wondering what&#8217;s the deal with the &#38;#8217; things, check this [handy utf-8 character reference](http://mcdlr.com/8/)
+
+-
+  id: responsive-web-design-presentation
+  title: Responsive Web Design presentation
+  url: /responsive-web-design-presentation/
+  thumbnail-url: responsive-web-design-presentation.jpg
+  github-repo: 
+  pubdate: 2012-03-11
+  description: |
+    This is the video and slides to my talk at [wroc_love.rb](http://wrocloverb.com/).
+
+    Responsive Web Design is all about having the same content visible in all devices, from tiny mobiles to huge monitors, preserving proper readability and adapting to the medium. In this talk I will present the concept of responsiveness and teach with examples how to make a layout responsive with the one-two punch of fluid layouts and media queries.
+
+-
+  id: de-sijl
+  title: De Stijl
+  url: /de-stijl/
+  thumbnail-url: de-stijl.png
+  github-repo: 
+  pubdate: 2012-01-03
+  description: |
+    Piet Mondrian painting, [De Stijl art movement](http://en.wikipedia.org/wiki/De_Stijl); rendered with HTML5 and CSS3, completely fluid and responsive.
+
+    I&#8217;m only using js to adapt the height and width of the containing element to the viewport, but all the elements that comprise the actual painting are absolutely positioned with percentage values, making their positions relative to their containing element&#8217;s dimensions.
+
+    With this project and DOMcraft I&#8217;ve found out that Firefox subpixel renderization is uncanny. In the other browsers you&#8217;ll notice gaps that will seldom show on Firefox. Try resizing the window of [De Stijl](/de-stijl) on different browsers to see what I mean.
+
+    Oh! For comparison, you can [see the original painting](/de-stijl/mondrian.jpg). The colors are not exactly the same, but they are at their most &#8220;pure&#8221; RGB value, which follows De Stijl&#8217;s proposition of abstraction and simplicity.
+
+-
+  id: wai-aria-cheatsheet
+  title: WAI ARIA Cheatsheet
+  url: /wai-aria-cheatsheet/
+  thumbnail-url: wai-aria-cheatsheet.jpg
+  github-repo: https://github.com/DrummerHead/WAI-ARIA-Cheatsheet
+  pubdate: 2011-12-07
+  description: |
+    What started as a simple WAI-ARIA Landmark Roles Cheatsheet turned out to be a full-blown article about the subject.
+
+    Since I had the different elements of the page done, I figured &#8220;Why not fill them with content, then?&#8221; and that is what I did.
+
+    Also, it appears that <time datetime="2011-12-07" title="2011-12-07">to date</time> there was no other WAI-ARIA Cheatsheet, so this will prove useful to developers. Hope it does!
+
+-
+  id: resp
+  title: Responsive Web Design Experiment
+  url: /resp/
+  thumbnail-url: resp.png
+  github-repo: https://github.com/DrummerHead/Responsive-Web-Design-Experiment
+  pubdate: 2011-11-17
+  description: |
+    This is a little experiment that I did while attending [RubyConfUy 2011](http://rubyconfuruguay.org/en) for a lightning talk about [Responsive Web Design](http://www.alistapart.com/articles/responsive-web-design/).
+
+    This experiment explicitly shows the capability of @media for content control over differently sized viewports; try resizing your browser window or accessing this page through your mobile device or tablet device.
+
+    While it may seem this experiment makes use of Javascript, it does not :)
+
+    You can check the underlying code at [/resp/index.html](view-source:http://mcdlr.com/resp/) and [/resp/stijl.css](view-source:http://mcdlr.com/resp/stijl.css)
+
+-
+  id: utf-8
+  title: UTF-8 Character list
+  url: /utf-8/
+  thumbnail-url: utf-8.png
+  github-repo: https://github.com/DrummerHead/UTF-8-Character-list
+  pubdate: 2011-10-12
+  description: |
+    All the strange characters contained in UTF-8 is amazing
+    In this page you can check them all up. You can find really bizarre stuff, enjoy!
+
+-
+  id: common-html-entities
+  title: Common HTML Entities
+  url: /8/
+  thumbnail-url: common-html-entities.png
+  github-repo: https://github.com/DrummerHead/HTML-Entities
+  pubdate: 2011-10-10
+  description: |
+    Just a list of commonly used HTML entities with the proper code in decimal entity notation.
+
+    I uploaded this a long time ago but did not consider it worthy enough for it to be shown here. But you know what? I use it all the time!
+
+    If it's so useful for me, it's probably gonna be useful for more people, I guess :)
+
+-
+  id: msfw
+  title: Make Safe For Work
+  url: /msfw/
+  thumbnail-url: msfw.jpg
+  github-repo: https://github.com/DrummerHead/Make-Safe-For-Work
+  pubdate: 2011-09-05
+  description: |
+    Have you ever wanted to share a <abbr title="Not Safe For Work">NSFW</abbr> with a coworker, but in a more stealthy way? This is the tool for you. Just paste the image URL and you'll get a link you can use to share the image in a stealthy way. Just try it!
+
+-
+  id: js-inject
+  title: JS Inject
+  url: /js-inject/
+  thumbnail-url: js-inject.jpg
+  github-repo: https://github.com/DrummerHead/JS-Inject
+  pubdate: 2011-09-20
+  description: |
+    With this tool creating a Bookmarklet is much easier. Just type the code, assign a name and an Anchor element with your code will be created below for you to drag to your bookmarks.
+
+    You also have the possibility of adding jQuery to the target page so you can write you javascript using jQuery, just a checkbox away!
+
+-
+  id: css-inject
+  title: CSS Inject
+  url: /css-inject/
+  thumbnail-url: css-inject.jpg
+  github-repo: https://github.com/DrummerHead/CSS-inject
+  pubdate: 2011-09-20
+  description: |
+        Ever wanted to change the layout and design of any given page? Perhaps test CSS through many browsers without deploying?
+
+        With this tool (Wich is an expansion of the one below) you just type your CSS and the bookmarklet is generated for you. Then you use that bookmarklet in any given page and the styles will be applied. That easy!
+
+-
+  id: key-sheet
+  title: HTML Keyboard
+  url: /key-sheet/
+  thumbnail-url: key-sheet.jpg
+  github-repo: https://github.com/DrummerHead/HTML-Keyboard
+  pubdate: 2011-09-09
+  description: |
+    This is a work in progress. The html keyboard is part of bigger stuff, but since the keyboard is already finished I thought I'd just put it out there for somebody else to see or steal :P
+
+-
+  id: css-reload
+  title: CSS Reload
+  url: 'javascript:(function(){ $(document).ready(function(){ $(&quot;link[rel="stylesheet"]&quot;).each(function(){ var href = $(this).attr("href"); var cssNum = /\d/.exec(href); var theOtherStuff = /^[^?]*\?/.exec(href); cssNum++; newHref = theOtherStuff + cssNum; $(this).attr("href",newHref); }); }); })();'
+  thumbnail-url: wwwToBeta.png
+  github-repo: 
+  pubdate: 2011-09-20
+  description: |
+    This bookmarklet reloads only the CSS on your website. It assumes you are using jQuery and that you use a query to load newer styles (something like &#60;link rel="stylesheet" href="/style.css?3"&#62;), it's ideal for Ruby on Rails apps.
+
+    If you are only modifiying styles, it's quite faster than to reloading the whole page. Also, sometimes elements on page change via js and a page reload would take you back to another state, in that case this is the most useful case scenario. Actually I had to creat this to be able to adapt an ajax wizard to mobile.
+
+-
+  id: gal
+  title: Dynamic Gallery
+  url: /gal/
+  thumbnail-url: gal.png
+  github-repo: https://github.com/DrummerHead/Scannato
+  pubdate: 2010-08-07
+  description: |
+    &#8220;scannato&#8221; is the name of this dynamic jQuery gallery. It works by generating links to images who's name follow a numeric progression.
+
+    For instance, if you find an image at &#8220;http://www.somewhere.com/pics/car020.jpg&#8221; you can feed scannato with &#8220;http://www.somewhere.com/pics/car&#8221; for the url field; &#8220;1&#8221; for the starting n&deg; field; &#8220;50&#8221; for the ending n&deg; field; &#8220;3&#8221; for the padding zeroes field and leave &#8220;.jpg&#8221; as the format. Then, by pressing the &#8220;do it&#8221; button, a gallery will be generated with all the images ranging from &#8220;http://www.somewhere.com/pics/car001.jpg&#8221; to &#8220;http://www.somewhere.com/pics/car050.jpg&#8221;
+
+    if the padding zeroes field is left empty, no padding zeroes will be put and the numbers will progress normally.
+
+-
+  id: car
+  title: Media Queries
+  url: /car/
+  thumbnail-url: car.png
+  github-repo: 
+  pubdate: 2010-12-20
+  description: |
+    Thanks to [Media Queries](http://www.alistapart.com/articles/responsive-web-design/) and a [Fluid Layout](http://www.alistapart.com/articles/fluidgrids/), this page looks good from 2560px wide and upwards to as small as 320px wide (an iphone, vertical view).
+
+    Also, I crafted some jQuery (modified from [Scannato](#scannato)) to see the images bigger on hover. It's nice, [I like!](temp/borat.jpg)
+
+-
+  id: www-to-beta
+  title: www to beta
+  url: 'javascript:(function(){var h = window.location.href;if(/^https?:\/\/www2?/.test(h)){var n = h.replace(/^http(s)?:\/\/www2?/g,"http$1://beta");window.location.href=n;} else if(/^https?:\/\/beta/.test(h)){var n = h.replace(/^http(s)?:\/\/beta/g,"http$1://www");window.location.href=n;} else {alert("This site is neither beta nor www, I am of no use here.")}})()'
+  thumbnail-url: wwwToBeta.png
+  github-repo: 
+  pubdate: 2010-10-26
+  description: |
+    This little bookmarklet will make you jump straight from www environment to beta environment and back again. It is a simple solution that saves you the hassle to manually type on the address bar.
+
+    Just drag the image on the left to your bookmarks bar and it is ready to be used!
+
+-
+  id: make-links
+  title: Text into links
+  url: /make-links/
+  thumbnail-url: make-links.png
+  github-repo: https://github.com/DrummerHead/Text-into-links
+  pubdate: 2010-08-07
+  description: |
+    Imagine you have been given a text with a series of links to places you need to go.
+
+    Perhaps you would normally copy and paste these links into your preferred browser and go.
+
+    With this page you can skip copy and pasting several links and just make whatever text that is a link into an actual clickable link
+
+    This may sound link something pretty mundane, but is actually something I needed for work, since sometimes I save reference url in text files and need to access those urls later... and I don't like copy pasting things around when a smarter solution  is at hand :)
+
+-
+  id: tv-color-bars
+  title: TV Color Bars
+  url: /tv-color-bars/
+  thumbnail-url: tv-color-bars.png
+  github-repo: 
+  pubdate: 2010-08-01
+  description: |
+    XHTML Fluid layout rendering the common [SMPTE color bars](http://en.wikipedia.org/wiki/SMPTE_color_bars)
+
+    Colud be a nice (but quite unfriendly) [404 page](http://www.useit.com/alertbox/404_improvement.html)
+
+-
+  id: visual-crypto
+  title: Visual Cryptography
+  url: /visual-crypto/
+  thumbnail-url: visual-crypto.jpg
+  github-repo: 
+  pubdate: 2011-07-03
+  description: |
+    Just a quick test on [Visual Cryptography](http://en.wikipedia.org/wiki/Visual_cryptography). Slowly resize the browser window until the secret image appears.
+
+    You have now gained +10 in espionage.
+
+-
+  id: hex-color-word
+  title: Hex colors and words
+  url: /hex-color-word/
+  thumbnail-url: hex-color-word.png
+  github-repo: 
+  pubdate: 2010-01-23
+  description: |
+    this page contains [hex color codes](http://en.wikipedia.org/wiki/Web_colors#Hex_triplet) that are also words or that are contained in a word.
+
+    Hope this proves useful to somebody. I think it can be useful for domain name brokers or for a new company name with color brand associations.
+
+-
+  id: bsod
+  title: Blue screen of death
+  url: /bsod/
+  thumbnail-url: bsod.png
+  github-repo: 
+  pubdate: 2010-05-30
+  description: |
+    A code rendition to the classic windows blue screen of death ([BSOD](http://en.wikipedia.org/wiki/Blue_Screen_of_Death))
+
+    This started as an investigation on system, pixelar fonts, and the realization that being able to do a &#8220;pixel perfect&#8221; version of BSOD was possible
+
+-
+  id: canvas-dh-logo
+  title: Canvas
+  url: /canvas-dh-logo/
+  thumbnail-url: drummerhead-logo-canvas.png
+  github-repo: 
+  pubdate: 2010-05-30
+  description: |
+    A really simple experiment with the new [canvas element](https://developer.mozilla.org/en/canvas_tutorial).
+
+    As my logo is quite orthogonal, it was a good exercise to make it using the ctx.fillRect() function
+
+-
+  id: unpxrq
+  title: text-shadow
+  url: /unpxrq/
+  thumbnail-url: unPXrq.png
+  github-repo: 
+  pubdate: 
+  description: |
+    Just a simple experiment page featuring some nice [text shadow](http://reference.sitepoint.com/css/text-shadow) that goes along with the style of the background tron-like dimensional box lines.
+
+    The page also centers on X and Y axes; even with a backward-compatible solution for IE6. The nick &#8220;unPXrq&#8221; is fictional, just &#8220;hacked&#8221; on ROT13. This is not used for defacement, it is just an exercise. White hat FTW.
