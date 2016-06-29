@@ -28,11 +28,11 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def markdown(text)
+    Tilt['markdown'].new { text }.render(scope=self)
+  end
+end
 
 # Build-specific configuration
 configure :build do
