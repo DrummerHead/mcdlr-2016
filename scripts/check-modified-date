@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'json'
+require 'net/http'
+
+data = YAML.load_file('../data/posts.yml')
+
+data.each do |post|
+  puts "title"
+  puts post["title"]
+
+  if post["source_url"]
+    puts "source_url"
+    puts post["source_url"]
+    puts "date_published"
+    puts post["date_published"]
+    puts "date modified"
+    date_modified = post["date_modified"].to_s
+    puts date_modified
+
+    user_repo = post["source_url"].match(/github\.com\/([^\/]*)\/([^\/]*)\/?$/)
+    repo_info = JSON.parse(Net::HTTP.get(URI("https://api.github.com/repos/#{user_repo[1]}/#{user_repo[2]}/commits")))
+    date_last_commit = repo_info[0]["commit"]["committer"]["date"].match(/([^T]*)T.*$/)[1]
+
+    puts "date of last commit"
+    puts date_last_commit
+
+    if date_modified != date_last_commit
+      puts "============================"
+      puts "modified date needs updating"
+      puts "============================"
+    else
+      puts "everything is cool"
+    end
+
+  else
+    puts "Does not have source url"
+  end
+  puts "\n------------"
+end
