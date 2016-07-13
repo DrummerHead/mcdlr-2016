@@ -1,14 +1,15 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1.0" name="viewport">
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' >
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='author' content='DrummerHead'>
+    <title><%= current_page.data.title || 'Middleman' %></title>
     <%= stylesheet_link_tag :main %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class='<%= page_classes %>' itemscope itemtype='https://schema.org/WebPage'>
     <%= yield %>
     <div id='scripts'>
       <%= javascript_include_tag :main %>
