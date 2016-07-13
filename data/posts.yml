@@ -5,7 +5,8 @@
 #   url: 
 #   thumbnail_url: 
 #   source_url: 
-#   date: 
+#   date_published: 
+#   date_modified: 
 #   description: |
 
 -
@@ -14,7 +15,8 @@
   url: /responsive-thumbnails/
   thumbnail_url: responsive-thumbnails.jpg
   source_url: https://github.com/DrummerHead/responsive-thumbnails
-  date: 2014-05-05
+  date_published: 2014-05-05
+  date_modified: 2014-05-05
   description: >
     I've always liked the pattern of having floated items in a fluid container. The elements adapt to the viewport's width and just "fall" when there's now enough space... but they do so rather ungracefully, leaving inconsistent white space on the sides.
 
@@ -28,7 +30,8 @@
   url: http://aprend.io/
   thumbnail_url: aprendio.png
   source_url: https://github.com/DrummerHead/aprend.io
-  date: 2014-04-12
+  date_published: 2014-04-12
+  date_modified: 2015-10-02
   description: >
     aprend.io is a Front-End course (only HTML &#38; CSS) in Spanish and for free, mainly composed of videos and reference code.
 
@@ -40,7 +43,8 @@
   url: /color/#303b97
   thumbnail_url: color.png
   source_url: https://github.com/DrummerHead/color
-  date: 2014-03-08
+  date_published: 2014-03-08
+  date_modified: 2014-03-08
   description: |
     See a hex color instantly by changing this page’s URL hash.
 
@@ -52,7 +56,8 @@
   url: /galNum-galFly/
   thumbnail_url: galNum-galFly.png
   source_url: https://github.com/DrummerHead/galNum-galFly
-  date: 2014-02-20
+  date_published: 2014-02-20
+  date_modified: 2016-07-05
   description: |
     These two bookmarklets allow you to create galleries on the fly, in two distinct circumstances. Check the page for the details!
 
@@ -66,7 +71,8 @@
   url: /font-viewer/
   thumbnail_url: font-viewer.png
   source_url: https://github.com/DrummerHead/font-viewer
-  date: 2013-11-20
+  date_published: 2013-11-20
+  date_modified: 2014-04-04
   description: |
     If you [get this app](https://github.com/DrummerHead/font-viewer) and [Apple Font Tool Suite](https://developer.apple.com/fonts/), you can run Font Viewer locally on your Mac and have a nifty font comparison and testing tool.
 
@@ -78,7 +84,8 @@
   url: /meme/
   thumbnail_url: meme.jpg
   source_url: https://github.com/DrummerHead/meme/
-  date: 2013-10-22
+  date_published: 2013-10-22
+  date_modified: 2013-10-22
   description: |
     Simple [AngularJS](http://angularjs.org/) app for generating Advice Animals. The particularity is that the text is overlayed on top of the image instead of being part of the binary. This makes editing and creating new memes a breeze.
 
@@ -90,7 +97,8 @@
   url: /game-of-life/
   thumbnail_url: game-of-life-glider.png
   source_url: https://github.com/DrummerHead/conway-game-of-life
-  date: 2013-02-07
+  date_published: 2013-02-07
+  date_modified: 2014-01-14
   description: |
     &#8220;Conway&#8217;s Game of Life&#8221; is a mathematical game created by John Conway, in an attempt to simplify a mathematical model for a hypothetical machine that could build copies of itself. This game opened up a whole new field of mathematical research, the field of [cellular automata](http://en.wikipedia.org/wiki/Cellular_automata)
 
@@ -102,7 +110,8 @@
   url: /bouncing-rainbow/
   thumbnail_url: bouncing-rainbow.png
   source_url: https://github.com/DrummerHead/bouncing-rainbow
-  date: 2012-10-08
+  date_published: 2012-10-08
+  date_modified: 2012-10-08
   description: |
     My first experiment with [Processing](http://www.processing.org/)! Really simple code with enjoyable results.
 
@@ -116,7 +125,8 @@
   url: /h/
   thumbnail_url: dhompage.png
   source_url: https://github.com/DrummerHead/DHomepage/
-  date: 2012-06-13
+  date_published: 2012-06-13
+  date_modified: 2014-02-23
   description: |
         DHompage is my personal homepage, and it can be yours too! It basically provides search fields for the most common internet searches and links for your most visited pages.
 
@@ -140,7 +150,8 @@
   url: /pangram-ipsum/
   thumbnail_url: pangram-ipsum.png
   source_url: https://github.com/DrummerHead/pangram-Ipsum
-  date: 2012-05-13
+  date_published: 2012-05-13
+  date_modified: 2012-09-15
   description: |
     Another useful little tool, [filler text](http://en.wikipedia.org/wiki/Filler_text) using [pangrams](http://en.wikipedia.org/wiki/Pangram). In general Lorem Ipsum is used as filler text, but why not Zoidberg? I mean&#8230; why not pangrams? They were created because they use each of the letters of the alphabet once, and that&#8217;s useful for testing typography. But it also generates a more homogenous visual texture.
 
@@ -156,7 +167,8 @@
   url: /responsive-web-design-presentation/
   thumbnail_url: responsive-web-design-presentation.jpg
   source_url: 
-  date: 2012-03-11
+  date_published: 2012-03-11
+  date_modified: 2012-03-11
   description: |
     This is the video and slides to my talk at [wroc_love.rb](http://wrocloverb.com/).
 
@@ -168,7 +180,8 @@
   url: /de-stijl/
   thumbnail_url: de-stijl.png
   source_url: 
-  date: 2012-01-03
+  date_published: 2012-01-03
+  date_modified: 2012-01-03
   description: |
     Piet Mondrian painting, [De Stijl art movement](http://en.wikipedia.org/wiki/De_Stijl); rendered with HTML5 and CSS3, completely fluid and responsive.
 
@@ -184,7 +197,8 @@
   url: /wai-aria-cheatsheet/
   thumbnail_url: wai-aria-cheatsheet.jpg
   source_url: https://github.com/DrummerHead/WAI-ARIA-Cheatsheet
-  date: 2011-12-07
+  date_published: 2011-12-07
+  date_modified: 2014-04-15
   description: |
     What started as a simple WAI-ARIA Landmark Roles Cheatsheet turned out to be a full-blown article about the subject.
 
@@ -198,7 +212,8 @@
   url: /resp/
   thumbnail_url: resp.png
   source_url: https://github.com/DrummerHead/Responsive-Web-Design-Experiment
-  date: 2011-11-17
+  date_published: 2011-11-17
+  date_modified: 2012-09-15
   description: |
     This is a little experiment that I did while attending [RubyConfUy 2011](http://rubyconfuruguay.org/en) for a lightning talk about [Responsive Web Design](http://www.alistapart.com/articles/responsive-web-design/).
 
@@ -214,7 +229,8 @@
   url: /utf-8/
   thumbnail_url: utf-8.png
   source_url: https://github.com/DrummerHead/UTF-8-Character-list
-  date: 2011-10-12
+  date_published: 2011-10-12
+  date_modified: 2012-09-15
   description: |
     All the strange characters contained in UTF-8 is amazing
     In this page you can check them all up. You can find really bizarre stuff, enjoy!
@@ -225,7 +241,8 @@
   url: /8/
   thumbnail_url: common-html-entities.png
   source_url: https://github.com/DrummerHead/HTML-Entities
-  date: 2011-10-10
+  date_published: 2011-10-10
+  date_modified: 2016-02-02
   description: |
     Just a list of commonly used HTML entities with the proper code in decimal entity notation.
 
@@ -239,7 +256,8 @@
   url: /msfw/
   thumbnail_url: msfw.jpg
   source_url: https://github.com/DrummerHead/Make-Safe-For-Work
-  date: 2011-09-05
+  date_published: 2011-09-05
+  date_modified: 2012-09-14
   description: |
     Have you ever wanted to share a <abbr title="Not Safe For Work">NSFW</abbr> with a coworker, but in a more stealthy way? This is the tool for you. Just paste the image URL and you'll get a link you can use to share the image in a stealthy way. Just try it!
 
@@ -249,7 +267,8 @@
   url: /js-inject/
   thumbnail_url: js-inject.jpg
   source_url: https://github.com/DrummerHead/JS-Inject
-  date: 2011-09-20
+  date_published: 2011-09-20
+  date_modified: 2015-05-23
   description: |
     With this tool creating a Bookmarklet is much easier. Just type the code, assign a name and an Anchor element with your code will be created below for you to drag to your bookmarks.
 
@@ -261,7 +280,8 @@
   url: /css-inject/
   thumbnail_url: css-inject.jpg
   source_url: https://github.com/DrummerHead/CSS-inject
-  date: 2011-09-20
+  date_published: 2011-09-20
+  date_modified: 2016-07-11
   description: |
         Ever wanted to change the layout and design of any given page? Perhaps test CSS through many browsers without deploying?
 
@@ -273,7 +293,8 @@
   url: /key-sheet/
   thumbnail_url: key-sheet.jpg
   source_url: https://github.com/DrummerHead/HTML-Keyboard
-  date: 2011-09-09
+  date_published: 2011-09-09
+  date_modified: 2013-06-16
   description: |
     This is a work in progress. The html keyboard is part of bigger stuff, but since the keyboard is already finished I thought I'd just put it out there for somebody else to see or steal :P
 
@@ -283,7 +304,8 @@
   url: 'javascript:(function(){ $(document).ready(function(){ $(&quot;link[rel="stylesheet"]&quot;).each(function(){ var href = $(this).attr("href"); var cssNum = /\d/.exec(href); var theOtherStuff = /^[^?]*\?/.exec(href); cssNum++; newHref = theOtherStuff + cssNum; $(this).attr("href",newHref); }); }); })();'
   thumbnail_url: wwwToBeta.png
   source_url: 
-  date: 2011-09-20
+  date_published: 2011-09-20
+  date_modified: 2011-09-20
   description: |
     This bookmarklet reloads only the CSS on your website. It assumes you are using jQuery and that you use a query to load newer styles (something like &#60;link rel="stylesheet" href="/style.css?3"&#62;), it's ideal for Ruby on Rails apps.
 
@@ -295,7 +317,8 @@
   url: /gal/
   thumbnail_url: gal.png
   source_url: https://github.com/DrummerHead/Scannato
-  date: 2010-08-07
+  date_published: 2010-08-07
+  date_modified: 2013-04-12
   description: |
     &#8220;scannato&#8221; is the name of this dynamic jQuery gallery. It works by generating links to images who's name follow a numeric progression.
 
@@ -309,7 +332,8 @@
   url: /car/
   thumbnail_url: car.png
   source_url: 
-  date: 2010-12-20
+  date_published: 2010-12-20
+  date_modified: 2010-12-20
   description: |
     Thanks to [Media Queries](http://www.alistapart.com/articles/responsive-web-design/) and a [Fluid Layout](http://www.alistapart.com/articles/fluidgrids/), this page looks good from 2560px wide and upwards to as small as 320px wide (an iphone, vertical view).
 
@@ -321,7 +345,8 @@
   url: 'javascript:(function(){var h = window.location.href;if(/^https?:\/\/www2?/.test(h)){var n = h.replace(/^http(s)?:\/\/www2?/g,"http$1://beta");window.location.href=n;} else if(/^https?:\/\/beta/.test(h)){var n = h.replace(/^http(s)?:\/\/beta/g,"http$1://www");window.location.href=n;} else {alert("This site is neither beta nor www, I am of no use here.")}})()'
   thumbnail_url: wwwToBeta.png
   source_url: 
-  date: 2010-10-26
+  date_published: 2010-10-26
+  date_modified: 2010-10-26
   description: |
     This little bookmarklet will make you jump straight from www environment to beta environment and back again. It is a simple solution that saves you the hassle to manually type on the address bar.
 
@@ -333,7 +358,8 @@
   url: /make-links/
   thumbnail_url: make-links.png
   source_url: https://github.com/DrummerHead/Text-into-links
-  date: 2010-08-07
+  date_published: 2010-08-07
+  date_modified: 2012-09-14
   description: |
     Imagine you have been given a text with a series of links to places you need to go.
 
@@ -349,7 +375,8 @@
   url: /tv-color-bars/
   thumbnail_url: tv-color-bars.png
   source_url: 
-  date: 2010-08-01
+  date_published: 2010-08-01
+  date_modified: 2010-08-01
   description: |
     XHTML Fluid layout rendering the common [SMPTE color bars](http://en.wikipedia.org/wiki/SMPTE_color_bars)
 
@@ -361,7 +388,8 @@
   url: /visual-crypto/
   thumbnail_url: visual-crypto.jpg
   source_url: 
-  date: 2011-07-03
+  date_published: 2011-07-03
+  date_modified: 2011-07-03
   description: |
     Just a quick test on [Visual Cryptography](http://en.wikipedia.org/wiki/Visual_cryptography). Slowly resize the browser window until the secret image appears.
 
@@ -373,7 +401,8 @@
   url: /hex-color-word/
   thumbnail_url: hex-color-word.png
   source_url: 
-  date: 2010-01-23
+  date_published: 2010-01-23
+  date_modified: 2010-01-23
   description: |
     this page contains [hex color codes](http://en.wikipedia.org/wiki/Web_colors#Hex_triplet) that are also words or that are contained in a word.
 
@@ -385,7 +414,8 @@
   url: /bsod/
   thumbnail_url: bsod.png
   source_url: 
-  date: 2010-05-30
+  date_published: 2010-05-30
+  date_modified: 2010-05-30
   description: |
     A code rendition to the classic windows blue screen of death ([BSOD](http://en.wikipedia.org/wiki/Blue_Screen_of_Death))
 
@@ -397,7 +427,8 @@
   url: /canvas-dh-logo/
   thumbnail_url: drummerhead-logo-canvas.png
   source_url: 
-  date: 2010-05-30
+  date_published: 2010-05-30
+  date_modified: 2010-05-30
   description: |
     A really simple experiment with the new [canvas element](https://developer.mozilla.org/en/canvas_tutorial).
 
@@ -409,7 +440,8 @@
   url: /unpxrq/
   thumbnail_url: unPXrq.png
   source_url: 
-  date: 2010-05-30
+  date_published: 2010-05-30
+  date_modified: 2010-05-30
   description: |
     Just a simple experiment page featuring some nice [text shadow](http://reference.sitepoint.com/css/text-shadow) that goes along with the style of the background tron-like dimensional box lines.
 
