@@ -9,6 +9,7 @@
 
 # Ignore the build directory
 /build
+/optimized-build
 
 # Ignore cache
 /.sass-cache
@@ -16,3 +17,6 @@
 
 # Ignore .DS_store file
 .DS_Store
+
+# npm packages
+/node_modules
