@@ -9,6 +9,15 @@ gulp.task('css', () => {
     .pipe(gulp.dest('optimized-build'))
 });
 
+gulp.task('sass-lint', () => {
+  return gulp.src('source/stylesheets/*.scss')
+    .pipe($.sassLint({
+      configFile: 'sass-lint.yml'
+    }))
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError())
+});
+
 gulp.task('default', () => {
   console.log('pero claro');
 });

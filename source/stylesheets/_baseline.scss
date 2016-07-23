@@ -5,9 +5,9 @@
 html {
   font-size: 1em;
   line-height: 1.4;
-  text-size-adjust: 100%;
   font-family: 'Paragraph', sans-serif;
-  color: #222;
+  text-size-adjust: 100%;
+  color: $root-font-color;
 }
 
 body {
