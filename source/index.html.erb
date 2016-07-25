@@ -5,8 +5,8 @@ title: MCDLR · Front–End Exploration
 <%= partial 'modules/header' %>
 
 <main itemprop='mainContentOfPage'>
-  <% data.posts.each do |post| %>
-    <%= partial 'modules/post', locals: {post: post} %>
+  <% data.articles.each do |article| %>
+    <%= partial 'modules/article', locals: {article: article} %>
   <% end %>
 </main>
 

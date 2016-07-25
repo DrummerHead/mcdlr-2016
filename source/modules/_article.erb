@@ -1,0 +1,40 @@
+<article id='<%= article.id %>' itemscope itemtype='https://schema.org/Article'>
+  <h2 itemprop='headline'><%= link_to article.title, article.url, itemprop: 'mainEntityOfPage' %></h2>
+  <% link_to article.url, itemprop: 'image', itemscope: '', itemtype: 'http://schema.org/ImageObject' do %>
+    <%= image_tag "/images/thumbnails/#{article.thumbnail_url}", itemprop: 'url', alt: "Thumbnail for #{article.title}" %>
+    <meta itemprop='width' content='300'>
+    <meta itemprop='height' content='187'>
+  <% end %>
+  <div itemprop='articleBody'>
+    <%= markdown article.description %>
+  </div>
+  <% date_modified_is_different = article.date_published != article.date_modified %>
+  <footer>
+    <ol>
+      <li>
+        <%= link_to 'Source code', article.source_url %>
+      </li>
+      <li>
+        Created on
+        <time datetime='<%= article.date_published %>' itemprop='datePublished'><%= article.date_published %></time>
+        <% if !date_modified_is_different %>
+          <meta itemprop='dateModified' content='<%= article.date_modified %>'>
+        <% end %>
+      </li>
+      <% if date_modified_is_different %>
+        <li>
+          Last update on
+          <time datetime='<%= article.date_modified %>' itemprop='dateModified'><%= article.date_modified %></time>
+        </li>
+      <% end %>
+      <li>
+        Author is
+        <address itemprop='author' itemscope itemtype='https://schema.org/Person'>
+          <a href="http://drummerhead.me/" itemprop='url'>
+            <span itemprop='name'>DrummerHead</span>
+          </a>
+        </address>
+      </li>
+    </ol>
+  <footer>
+</article>
