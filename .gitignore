@@ -9,7 +9,7 @@
 
 # Ignore the build directory
 /build
-/optimized-build
+/.tmp
 
 # Ignore cache
 /.sass-cache

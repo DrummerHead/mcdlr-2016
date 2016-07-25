@@ -18,9 +18,8 @@ page '/*.txt', layout: false
 
 # General configuration
 
-# Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  ignore 'stylesheets/*.scss'
 end
 
 ###
@@ -36,9 +35,16 @@ end
 
 # Build-specific configuration
 configure :build do
+  ignore 'stylesheets/*.scss'
   # Minify CSS on build
   # activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+activate :external_pipeline,
+  name: :gulp,
+  command: build? ? 'gulp build' : 'gulp',
+  source: ".tmp",
+  latency: 1
