@@ -31,5 +31,15 @@ gulp.task('sass-lint', () => {
     .pipe($.sassLint.failOnError())
 });
 
+gulp.task('serve', ['styles'], () => {
+  browserSync({
+    notify: false,
+    port: 9000,
+    proxy: 'http://localhost:4567/'
+  });
+
+  gulp.watch('source/stylesheets/**/*.scss', ['styles']);
+});
+
 gulp.task('build', ['styles']);
-gulp.task('default', ['styles']);
+gulp.task('default', ['serve']);

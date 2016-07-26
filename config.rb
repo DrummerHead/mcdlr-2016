@@ -47,4 +47,4 @@ activate :external_pipeline,
   name: :gulp,
   command: build? ? 'gulp build' : 'gulp',
   source: ".tmp",
-  latency: 1
+  latency: 0
