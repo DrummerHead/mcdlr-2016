@@ -17,9 +17,11 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
+ignore 'stylesheets/*.scss'
+ignore 'javascripts/modules/*'
+ignore 'javascripts/*.map'
 
 configure :development do
-  ignore 'stylesheets/*.scss'
 end
 
 ###
@@ -35,7 +37,6 @@ end
 
 # Build-specific configuration
 configure :build do
-  ignore 'stylesheets/*.scss'
   # Minify CSS on build
   # activate :minify_css
 

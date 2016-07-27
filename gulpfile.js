@@ -3,16 +3,17 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var browserify = require('browserify');
-var watchify = require('watchify');
-var babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const browserify = require('browserify');
+const watchify = require('watchify');
+const babelify = require('babelify');
 
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
 const del = require('del');
+const exec = require('child_process').exec;
 
 
 gulp.task('styles', () => {
@@ -28,6 +29,12 @@ gulp.task('styles', () => {
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/stylesheets'))
     .pipe(reload({stream: true}));
+});
+
+gulp.task('styles-minify', ['styles'], () => {
+  return gulp.src('.tmp/stylesheets/main.css')
+    .pipe($.cssnano({safe: true, autoprefixer: false}))
+    .pipe(gulp.dest('.tmp/stylesheets/'))
 });
 
 gulp.task('sass-lint', () => {
@@ -65,7 +72,7 @@ const browserifyBabelify = watch => {
     });
   }
   else {
-    var bundler = browserify('./source/javascripts/main.js', { debug: true }).transform(babelify)
+    var bundler = browserify('./source/javascripts/main.js', { debug: true }).transform(babelify);
     rebundle(bundler);
   }
 }
@@ -73,6 +80,30 @@ const browserifyBabelify = watch => {
 gulp.task('build-js', () => browserifyBabelify(false) );
 
 gulp.task('watch-js', () => browserifyBabelify(true) );
+
+gulp.task('rename-main-js', ['build-js'], cb => {
+  exec('sleep 1 && mv .tmp/javascripts/{main,main-unminified}.js', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('scripts-minify', ['rename-main-js'], () => {
+  return gulp.src('.tmp/javascripts/main-unminified.js')
+    .pipe($.uglify())
+    .pipe($.rename('main.js'))
+    .pipe(gulp.dest('.tmp/javascripts'));
+});
+
+gulp.task('delete-extra-js', ['scripts-minify'], cb => {
+  exec('rm .tmp/javascripts/main-unminified.js', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
 
@@ -86,6 +117,6 @@ gulp.task('serve', ['styles', 'watch-js'], () => {
   gulp.watch('source/stylesheets/**/*.scss', ['styles']);
 });
 
-gulp.task('build', ['styles', 'build-js']);
+gulp.task('build', ['styles-minify', 'delete-extra-js']);
 
 gulp.task('default', ['serve']);
