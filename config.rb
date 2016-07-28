@@ -19,7 +19,6 @@ page '/*.txt', layout: false
 # General configuration
 ignore 'stylesheets/*.scss'
 ignore 'javascripts/modules/*'
-ignore 'javascripts/*.map'
 
 configure :development do
 end
@@ -37,6 +36,7 @@ end
 
 # Build-specific configuration
 configure :build do
+  ignore 'javascripts/*.map'
   # Minify CSS on build
   # activate :minify_css
 

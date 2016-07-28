@@ -111,8 +111,14 @@ gulp.task('serve', ['styles', 'watch-js'], () => {
   browserSync({
     notify: false,
     port: 9000,
-    proxy: 'http://localhost:4567/'
+    proxy: 'http://localhost:4567/',
+    browser: 'google chrome'
   });
+
+  gulp.watch([
+    'source/**/*.erb',
+    'data/*.yml'
+  ]).on('change', () => setTimeout(() => reload(), 1500));
 
   gulp.watch('source/stylesheets/**/*.scss', ['styles']);
 });
