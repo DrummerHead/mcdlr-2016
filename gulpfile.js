@@ -40,7 +40,7 @@ gulp.task('styles-minify', ['styles'], () => {
 gulp.task('sass-lint', () => {
   return gulp.src('source/stylesheets/*.scss')
     .pipe($.sassLint({
-      configFile: 'sass-lint.yml'
+      configFile: '.sass-lint.yml'
     }))
     .pipe($.sassLint.format())
     .pipe($.sassLint.failOnError())
@@ -82,7 +82,7 @@ gulp.task('build-js', () => browserifyBabelify(false) );
 gulp.task('watch-js', () => browserifyBabelify(true) );
 
 gulp.task('rename-main-js', ['build-js'], cb => {
-  exec('sleep 1 && mv .tmp/javascripts/{main,main-unminified}.js', (err, stdout, stderr) => {
+  exec('sleep 2 && mv .tmp/javascripts/{main,main-unminified}.js', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -104,13 +104,12 @@ gulp.task('delete-extra-js', ['scripts-minify'], cb => {
   });
 });
 
-gulp.task('lint', () => {
+gulp.task('js-lint', () => {
   return gulp.src('source/javascripts/**/*.js')
     .pipe(reload({stream: true, once: true}))
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
-    .pipe(gulp.dest('source/javascripts'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
