@@ -104,6 +104,14 @@ gulp.task('delete-extra-js', ['scripts-minify'], cb => {
   });
 });
 
+gulp.task('lint', () => {
+  return gulp.src('source/javascripts/**/*.js')
+    .pipe(reload({stream: true, once: true}))
+    .pipe($.eslint())
+    .pipe($.eslint.format())
+    .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
+    .pipe(gulp.dest('source/javascripts'));
+});
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
 
