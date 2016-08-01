@@ -19,6 +19,8 @@ page '/*.txt', layout: false
 # General configuration
 ignore 'stylesheets/*.scss'
 ignore 'javascripts/modules/*'
+ignore 'color-test.*'
+ignore '/**/color-test.*'
 
 configure :development do
 end

@@ -1,0 +1,13 @@
+---
+title: MCDLR · Color test
+js: color-test
+css: color-test
+---
+
+<main itemprop='mainContentOfPage'>
+  <ul id='color-test'>
+    <% data.articles.each do |article| %>
+      <%= partial 'modules/color-test', locals: {article: article} %>
+    <% end %>
+  </ul>
+</main>

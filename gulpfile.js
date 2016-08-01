@@ -17,7 +17,7 @@ const exec = require('child_process').exec;
 
 
 gulp.task('styles', () => {
-  return gulp.src('source/stylesheets/main.scss')
+  return gulp.src('source/stylesheets/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
@@ -32,7 +32,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('styles-minify', ['styles'], () => {
-  return gulp.src('.tmp/stylesheets/main.css')
+  return gulp.src('.tmp/stylesheets/*.css')
     .pipe($.cssnano({safe: true, autoprefixer: false}))
     .pipe(gulp.dest('.tmp/stylesheets/'))
 });
@@ -46,14 +46,14 @@ gulp.task('sass-lint', () => {
     .pipe($.sassLint.failOnError())
 });
 
-const browserifyBabelify = watch => {
+const browserifyBabelify = ({sourceFile = 'main', watch = true} = {}) => {
   const rebundle = bundler => {
     bundler.bundle()
       .on('error', err => {
         console.error(err);
         this.emit('end');
       })
-      .pipe(source('main.js'))
+      .pipe(source(`${sourceFile}.js`))
       .pipe(buffer())
       .pipe($.plumber())
       .pipe($.sourcemaps.init({ loadMaps: true }))
@@ -64,7 +64,7 @@ const browserifyBabelify = watch => {
   }
 
   if (watch) {
-    var bundler = watchify(browserify('./source/javascripts/main.js', { debug: true }).transform(babelify));
+    var bundler = watchify(browserify(`./source/javascripts/${sourceFile}.js`, { debug: true }).transform(babelify));
     rebundle(bundler);
     bundler.on('update', function() {
       console.log('-> bundling...');
@@ -72,14 +72,19 @@ const browserifyBabelify = watch => {
     });
   }
   else {
-    var bundler = browserify('./source/javascripts/main.js', { debug: true }).transform(babelify);
+    var bundler = browserify(`./source/javascripts/${sourceFile}.js`, { debug: true }).transform(babelify);
     rebundle(bundler);
   }
 }
 
-gulp.task('build-js', () => browserifyBabelify(false) );
+gulp.task('build-js', () => browserifyBabelify({watch: false}) );
 
-gulp.task('watch-js', () => browserifyBabelify(true) );
+gulp.task('watch-js', () => browserifyBabelify() );
+
+gulp.task('build-js-color', () => browserifyBabelify({sourceFile: 'color-test', watch: false}) );
+
+gulp.task('watch-js-color', () => browserifyBabelify({sourceFile: 'color-test'}) );
+
 
 gulp.task('rename-main-js', ['build-js'], cb => {
   exec('sleep 2 && mv .tmp/javascripts/{main,main-unminified}.js', (err, stdout, stderr) => {
