@@ -19,8 +19,6 @@ page '/*.txt', layout: false
 # General configuration
 ignore 'stylesheets/*.scss'
 ignore 'javascripts/modules/*'
-ignore 'color-test.*'
-ignore '/**/color-test.*'
 
 configure :development do
 end
@@ -39,6 +37,8 @@ end
 # Build-specific configuration
 configure :build do
   ignore 'javascripts/*.map'
+  ignore 'color-test.*'
+  ignore '/**/color-test.*'
   # Minify CSS on build
   # activate :minify_css
 
