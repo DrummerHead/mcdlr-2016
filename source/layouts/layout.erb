@@ -6,13 +6,13 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name='author' content='DrummerHead'>
     <title><%= current_page.data.title || 'Middleman' %></title>
-    <%= stylesheet_link_tag :main %>
+    <%= stylesheet_link_tag current_page.data.css %>
   </head>
 
   <body class='<%= page_classes %>' itemscope itemtype='https://schema.org/WebPage'>
     <%= yield %>
     <div id='scripts'>
-      <%= javascript_include_tag :main %>
+      <%= javascript_include_tag current_page.data.js %>
     </div>
   </body>
 </html>
