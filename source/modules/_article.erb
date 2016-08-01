@@ -1,4 +1,4 @@
-<article id='<%= article.id %>' itemscope itemtype='https://schema.org/Article' data-color='<%= article.color %>'>
+<article id='<%= article.id %>' itemscope itemtype='https://schema.org/Article' data-color='<%= article.color.value %>'>
   <h2 itemprop='headline'><%= link_to article.title, article.url, itemprop: 'mainEntityOfPage' %></h2>
   <% link_to article.url, itemprop: 'image', itemscope: '', itemtype: 'http://schema.org/ImageObject' do %>
     <%= image_tag "/images/thumbnails/#{article.thumbnail_url}", itemprop: 'url', alt: "Thumbnail for #{article.title}" %>
