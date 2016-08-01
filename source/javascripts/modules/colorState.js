@@ -1,20 +1,15 @@
-const getRandomColor = () => {
-  const go = rand => Math.floor(rand * 256);
-  return `rgb(${go(Math.random())}, ${go(Math.random())}, ${go(Math.random())})`;
-};
-
 const getArticlesPositions = () => Array.from(document.querySelectorAll('article'))
   .map(article =>
     ({
       id: article.id,
       offset: article.offsetTop,
-      color: getRandomColor(),
+      color: article.dataset.color,
     })
   )
   .concat({
     id: 'bung',
     offset: document.body.scrollHeight,
-    color: getRandomColor(),
+    color: '#fff',
   });
 
 const isScrollingOnTheArticle = (i, articles, delta, windowOffset, lastArticle) =>

@@ -5,6 +5,7 @@
 #   url: 
 #   thumbnail_url: 
 #   source_url: 
+#   color: 
 #   date_published: 
 #   date_modified: 
 #   description: |
@@ -15,6 +16,7 @@
   url: /responsive-thumbnails/
   thumbnail_url: responsive-thumbnails.jpg
   source_url: https://github.com/DrummerHead/responsive-thumbnails
+  color: 'rgb(167, 200, 231)'
   date_published: 2014-05-05
   date_modified: 2014-05-05
   description: >
@@ -30,6 +32,7 @@
   url: http://aprend.io/
   thumbnail_url: aprendio.png
   source_url: https://github.com/DrummerHead/aprend.io
+  color: 'rgb(179, 211, 227)'
   date_published: 2014-04-12
   date_modified: 2015-10-02
   description: >
@@ -43,6 +46,7 @@
   url: /color/#303b97
   thumbnail_url: color.png
   source_url: https://github.com/DrummerHead/color
+  color: 'rgb(53, 61, 147)'
   date_published: 2014-03-08
   date_modified: 2014-03-08
   description: |
@@ -56,6 +60,7 @@
   url: /galNum-galFly/
   thumbnail_url: galNum-galFly.png
   source_url: https://github.com/DrummerHead/galNum-galFly
+  color: 'rgb(180, 204, 4)'
   date_published: 2014-02-20
   date_modified: 2016-07-05
   description: |
@@ -71,6 +76,7 @@
   url: /font-viewer/
   thumbnail_url: font-viewer.png
   source_url: https://github.com/DrummerHead/font-viewer
+  color: 'rgb(252, 225, 13)'
   date_published: 2013-11-20
   date_modified: 2014-04-04
   description: |
@@ -84,6 +90,7 @@
   url: /meme/
   thumbnail_url: meme.jpg
   source_url: https://github.com/DrummerHead/meme/
+  color: 'rgb(91, 102, 120)'
   date_published: 2013-10-22
   date_modified: 2013-10-22
   description: |
@@ -97,6 +104,7 @@
   url: /game-of-life/
   thumbnail_url: game-of-life-glider.png
   source_url: https://github.com/DrummerHead/conway-game-of-life
+  color: 'rgb(226, 226, 226)'
   date_published: 2013-02-07
   date_modified: 2014-01-14
   description: |
@@ -110,6 +118,7 @@
   url: /bouncing-rainbow/
   thumbnail_url: bouncing-rainbow.png
   source_url: https://github.com/DrummerHead/bouncing-rainbow
+  color: 'rgb(84, 77, 252)'
   date_published: 2012-10-08
   date_modified: 2012-10-08
   description: |
@@ -125,6 +134,7 @@
   url: /h/
   thumbnail_url: dhompage.png
   source_url: https://github.com/DrummerHead/DHomepage/
+  color: 'rgb(13, 13, 13)'
   date_published: 2012-06-13
   date_modified: 2014-02-23
   description: |
@@ -150,6 +160,7 @@
   url: /pangram-ipsum/
   thumbnail_url: pangram-ipsum.png
   source_url: https://github.com/DrummerHead/pangram-Ipsum
+  color: 'rgb(116, 130, 149)'
   date_published: 2012-05-13
   date_modified: 2012-09-15
   description: |
@@ -167,6 +178,7 @@
   url: /responsive-web-design-presentation/
   thumbnail_url: responsive-web-design-presentation.jpg
   source_url: 
+  color: 'rgb(160, 60, 73)'
   date_published: 2012-03-11
   date_modified: 2012-03-11
   description: |
@@ -180,6 +192,7 @@
   url: /de-stijl/
   thumbnail_url: de-stijl.png
   source_url: 
+  color: 'rgb(251, 12, 4)'
   date_published: 2012-01-03
   date_modified: 2012-01-03
   description: |
@@ -197,6 +210,7 @@
   url: /wai-aria-cheatsheet/
   thumbnail_url: wai-aria-cheatsheet.jpg
   source_url: https://github.com/DrummerHead/WAI-ARIA-Cheatsheet
+  color: 'rgb(228, 228, 226)'
   date_published: 2011-12-07
   date_modified: 2014-04-15
   description: |
@@ -212,6 +226,7 @@
   url: /resp/
   thumbnail_url: resp.png
   source_url: https://github.com/DrummerHead/Responsive-Web-Design-Experiment
+  color: 'rgb(45, 164, 45)'
   date_published: 2011-11-17
   date_modified: 2012-09-15
   description: |
@@ -229,6 +244,7 @@
   url: /utf-8/
   thumbnail_url: utf-8.png
   source_url: https://github.com/DrummerHead/UTF-8-Character-list
+  color: 'rgb(192, 176, 203)'
   date_published: 2011-10-12
   date_modified: 2012-09-15
   description: |
@@ -241,6 +257,7 @@
   url: /8/
   thumbnail_url: common-html-entities.png
   source_url: https://github.com/DrummerHead/HTML-Entities
+  color: 'rgb(129, 109, 186)'
   date_published: 2011-10-10
   date_modified: 2016-02-02
   description: |
@@ -256,6 +273,7 @@
   url: /msfw/
   thumbnail_url: msfw.jpg
   source_url: https://github.com/DrummerHead/Make-Safe-For-Work
+  color: 'rgb(159, 148, 145)'
   date_published: 2011-09-05
   date_modified: 2012-09-14
   description: |
@@ -267,6 +285,7 @@
   url: /js-inject/
   thumbnail_url: js-inject.jpg
   source_url: https://github.com/DrummerHead/JS-Inject
+  color: 'rgb(224, 240, 218)'
   date_published: 2011-09-20
   date_modified: 2015-05-23
   description: |
@@ -280,6 +299,7 @@
   url: /css-inject/
   thumbnail_url: css-inject.jpg
   source_url: https://github.com/DrummerHead/CSS-inject
+  color: 'rgb(225, 244, 238)'
   date_published: 2011-09-20
   date_modified: 2016-07-11
   description: |
@@ -293,6 +313,7 @@
   url: /key-sheet/
   thumbnail_url: key-sheet.jpg
   source_url: https://github.com/DrummerHead/HTML-Keyboard
+  color: 'rgb(202, 210, 212)'
   date_published: 2011-09-09
   date_modified: 2013-06-16
   description: |
@@ -304,6 +325,7 @@
   url: 'javascript:(function(){ $(document).ready(function(){ $(&quot;link[rel="stylesheet"]&quot;).each(function(){ var href = $(this).attr("href"); var cssNum = /\d/.exec(href); var theOtherStuff = /^[^?]*\?/.exec(href); cssNum++; newHref = theOtherStuff + cssNum; $(this).attr("href",newHref); }); }); })();'
   thumbnail_url: wwwToBeta.png
   source_url: 
+  color: 'rgb(15, 82, 90)'
   date_published: 2011-09-20
   date_modified: 2011-09-20
   description: |
@@ -317,6 +339,7 @@
   url: /gal/
   thumbnail_url: gal.png
   source_url: https://github.com/DrummerHead/Scannato
+  color: 'rgb(254, 251, 3)'
   date_published: 2010-08-07
   date_modified: 2013-04-12
   description: |
@@ -332,6 +355,7 @@
   url: /car/
   thumbnail_url: car.png
   source_url: 
+  color: 'rgb(194, 60, 52)'
   date_published: 2010-12-20
   date_modified: 2010-12-20
   description: |
@@ -345,6 +369,7 @@
   url: 'javascript:(function(){var h = window.location.href;if(/^https?:\/\/www2?/.test(h)){var n = h.replace(/^http(s)?:\/\/www2?/g,"http$1://beta");window.location.href=n;} else if(/^https?:\/\/beta/.test(h)){var n = h.replace(/^http(s)?:\/\/beta/g,"http$1://www");window.location.href=n;} else {alert("This site is neither beta nor www, I am of no use here.")}})()'
   thumbnail_url: wwwToBeta.png
   source_url: 
+  color: 'rgb(15, 82, 90)'
   date_published: 2010-10-26
   date_modified: 2010-10-26
   description: |
@@ -358,6 +383,7 @@
   url: /make-links/
   thumbnail_url: make-links.png
   source_url: https://github.com/DrummerHead/Text-into-links
+  color: 'rgb(235, 225, 225)'
   date_published: 2010-08-07
   date_modified: 2012-09-14
   description: |
@@ -375,6 +401,7 @@
   url: /tv-color-bars/
   thumbnail_url: tv-color-bars.png
   source_url: 
+  color: 'rgb(255, 0, 0)'
   date_published: 2010-08-01
   date_modified: 2010-08-01
   description: |
@@ -388,6 +415,7 @@
   url: /visual-crypto/
   thumbnail_url: visual-crypto.jpg
   source_url: 
+  color: 'rgb(66, 66, 66)'
   date_published: 2011-07-03
   date_modified: 2011-07-03
   description: |
@@ -401,6 +429,7 @@
   url: /hex-color-word/
   thumbnail_url: hex-color-word.png
   source_url: 
+  color: 'rgb(202, 255, 234)'
   date_published: 2010-01-23
   date_modified: 2010-01-23
   description: |
@@ -414,6 +443,7 @@
   url: /bsod/
   thumbnail_url: bsod.png
   source_url: 
+  color: 'rgb(4, 4, 172)'
   date_published: 2010-05-30
   date_modified: 2010-05-30
   description: |
@@ -427,6 +457,7 @@
   url: /canvas-dh-logo/
   thumbnail_url: drummerhead-logo-canvas.png
   source_url: 
+  color: 'rgb(243, 243, 243)'
   date_published: 2010-05-30
   date_modified: 2010-05-30
   description: |
@@ -440,6 +471,7 @@
   url: /unpxrq/
   thumbnail_url: unPXrq.png
   source_url: 
+  color: 'rgb(0, 255, 0)'
   date_published: 2010-05-30
   date_modified: 2010-05-30
   description: |
