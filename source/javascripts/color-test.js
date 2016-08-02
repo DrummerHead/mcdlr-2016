@@ -1,9 +1,9 @@
-import * as d3Color from 'd3-color'
+import * as d3Color from 'd3-color';
 
 let allColors;
 
-for(const li of document.querySelectorAll('#color-test li')){
-  const color = d3Color.cubehelix(li.dataset.colorSeed)
+for (const li of document.querySelectorAll('#color-test li')) {
+  const color = d3Color.cubehelix(li.dataset.colorSeed);
   const newColor = color;
   newColor.s = 1;
   newColor.l = 0.95;
@@ -23,12 +23,11 @@ for(const li of document.querySelectorAll('#color-test li')){
     <li>s: ${newColor.s}</li>
     <li>l: ${newColor.l}</li>
     <li>areEqual: ${newColor.rgb().toString() === li.dataset.colorValue}</li>
-  </ul>`
+  </ul>`;
 
   li.insertAdjacentHTML('beforeend', data);
 
   li.setAttribute('style', `background-color: ${newColor.rgb()}`);
-
 }
 
 window.allColors = allColors;

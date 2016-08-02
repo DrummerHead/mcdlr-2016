@@ -1,3 +1,5 @@
+import { throttle } from 'lodash';
+
 const getArticlesPositions = () => Array.from(document.querySelectorAll('article'))
   .map(article =>
     ({
@@ -30,7 +32,7 @@ const colorState = () => {
     }
   }
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', throttle(() => {
     const windowOffset = window.scrollY;
     for (const [i, article] of articles.entries()) {
       if (isScrollingOnTheArticle(i, articles, delta, windowOffset, lastArticle)) {
@@ -40,8 +42,7 @@ const colorState = () => {
         break;
       }
     }
-  });
+  }, 500, { leading: false, trailing: true }));
 };
 
 export default colorState;
-
