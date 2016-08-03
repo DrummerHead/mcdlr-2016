@@ -1,4 +1,4 @@
-import { throttle } from 'lodash';
+import throttle from 'lodash/throttle';
 
 const getArticlesPositions = () => Array.from(document.querySelectorAll('article'))
   .map(article =>

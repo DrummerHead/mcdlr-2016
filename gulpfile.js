@@ -7,7 +7,9 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const browserify = require('browserify');
 const watchify = require('watchify');
+const rollupify = require('rollupify');
 const babelify = require('babelify');
+const uglifyify = require('uglifyify');
 
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
@@ -66,13 +68,17 @@ const browserifyBabelify = ({sourceFile = 'main', watch = true} = {}) => {
   if (watch) {
     var bundler = watchify(browserify(`./source/javascripts/${sourceFile}.js`, { debug: true }).transform(babelify));
     rebundle(bundler);
-    bundler.on('update', function() {
+    bundler.on('update', () => {
       console.log('-> bundling...');
       rebundle(bundler);
     });
   }
   else {
-    var bundler = browserify(`./source/javascripts/${sourceFile}.js`, { debug: true }).transform(babelify);
+    var bundler = browserify(`./source/javascripts/${sourceFile}.js`, { debug: true })
+      .transform(rollupify)
+      .transform(babelify)
+      .transform(uglifyify);
+
     rebundle(bundler);
   }
 }
