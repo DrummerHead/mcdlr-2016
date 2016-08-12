@@ -1,63 +1,101 @@
 import throttle from 'lodash/throttle';
 
-const getArticlesPositions = () => Array.from(document.querySelectorAll('article'))
-  .map(article =>
-    ({
-      id: article.id,
-      offset: article.offsetTop,
-      color: article.dataset.color,
-    })
-  )
-  .concat({
-    id: 'bung',
-    offset: document.body.scrollHeight,
-    color: '#fff',
-  });
+class ColorState {
 
-const isScrollingOnTheArticle = (i, articles, delta, windowOffset, lastArticle) =>
-  articles[i].offset - delta < windowOffset &&
-  windowOffset < articles[i + 1].offset - delta &&
-  lastArticle !== articles[i].id;
-
-const changeColor = (articles, delta, lastArticle) => {
-  const windowOffset = window.scrollY;
-  for (const [i, article] of articles.entries()) {
-    if (isScrollingOnTheArticle(i, articles, delta, windowOffset, lastArticle)) {
-      lastArticle = article.id;
-      console.log(`article.id: ${article.id}`);
-      document.body.setAttribute('style', `background-color: ${article.color}`);
-      break;
-    }
-  }
-};
-
-const colorState = () => {
-  const articles = getArticlesPositions();
-  const delta = Math.floor(window.innerHeight * (3 / 7));
-  let lastArticle;
-
-  // TODO: remove this for statement after done developing
-  for (const article of articles) {
-    const h2 = document.querySelector(`#${article.id} h2`);
-    if (h2) {
-      h2.setAttribute('style', `background-color: ${article.color}`);
-    }
+  constructor({ deltaRatio = 3 / 7, window, document }) {
+    this.window = window;
+    this.document = document;
+    this.articles = [];
+    this.lastArticle = null;
+    this.deltaRatio = deltaRatio;
+    this.delta = 0;
   }
 
-  changeColor(articles, delta, lastArticle);
+  setArticlesPositions() {
+    this.articles = Array.from(this.document.querySelectorAll('article'))
+      .map(article =>
+        ({
+          id: article.id,
+          offset: article.offsetTop,
+          color: article.dataset.color,
+        })
+      )
+      .concat({
+        id: 'bung',
+        offset: this.document.body.scrollHeight,
+        color: '#fff',
+      });
+  }
 
-  window.addEventListener(
-    'scroll',
-    throttle(
-      changeColor
-        .bind(null, articles, delta, lastArticle),
-      500,
-      {
-        leading: false,
-        trailing: true,
+  setDelta() {
+    this.delta = Math.floor(this.window.innerHeight * this.deltaRatio);
+  }
+
+  isScrollingOnTheArticle(i, viewportYPosition) {
+    return this.articles[i].offset - this.delta < viewportYPosition &&
+      viewportYPosition < this.articles[i + 1].offset - this.delta &&
+      this.lastArticle !== this.articles[i].id;
+  }
+
+  changeColor() {
+    console.log('scroll');
+    const viewportYPosition = this.window.scrollY;
+    for (const [i, article] of this.articles.entries()) {
+      if (this.isScrollingOnTheArticle(i, viewportYPosition)) {
+        this.lastArticle = article.id;
+        console.log(`article.id: ${article.id}`);
+        this.document.body.setAttribute('style', `background-color: ${article.color}`);
+        break;
       }
-    )
-  );
-};
+    }
+  }
 
-export default colorState;
+  updateLayoutData() {
+    console.log('resize');
+    this.setArticlesPositions();
+    this.setDelta();
+    this.changeColor();
+  }
+
+  init() {
+    this.updateLayoutData();
+
+    // TODO: remove this for statement after done developing
+    for (const article of this.articles) {
+      const h2 = this.document.querySelector(`#${article.id} h2`);
+      if (h2) {
+        h2.setAttribute('style', `background-color: ${article.color}`);
+      }
+    }
+
+    this.window.addEventListener(
+      'scroll',
+      throttle(
+        this.changeColor
+          .bind(this),
+        512,
+        {
+          leading: false,
+          trailing: true,
+        }
+      )
+    );
+
+    this.window.addEventListener(
+      'resize',
+      throttle(
+        this.updateLayoutData
+          .bind(this),
+        512,
+        {
+          leading: false,
+          trailing: true,
+        }
+      )
+    );
+  }
+
+}
+
+
+export default ColorState;

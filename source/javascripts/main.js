@@ -1,6 +1,7 @@
-import colorState from './modules/colorState';
+import ColorState from './modules/colorState';
 
 window.addEventListener('load', () => {
   console.log('it loaded');
-  colorState();
+  const colorState = new ColorState({ deltaRatio: 3 / 7, window, document });
+  colorState.init();
 });
