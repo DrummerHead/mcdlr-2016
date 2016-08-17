@@ -17,11 +17,10 @@ for (const li of document.querySelectorAll('#color-test li')) {
   `;
 
   const data = `<ul class='color-data'>
+    <li>id: ${li.id}</li>
     <li>original: ${li.dataset.colorSeed}</li>
     <li>rgb: ${newColor.rgb()}</li>
     <li>h: ${newColor.h}</li>
-    <li>s: ${newColor.s}</li>
-    <li>l: ${newColor.l}</li>
     <li>areEqual: ${newColor.rgb().toString() === li.dataset.colorValue}</li>
   </ul>`;
 

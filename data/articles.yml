@@ -19,8 +19,8 @@
   thumbnail_url: responsive-thumbnails.jpg
   source_url: https://github.com/DrummerHead/responsive-thumbnails
   color:
-    seed: 'rgb(167, 200, 231)'
-    value: 'rgb(228, 246, 255)'
+    seed: 'rgb(182, 163, 67)'
+    value: 'rgb(248, 243, 219)'
   date_published: 2014-05-05
   date_modified: 2014-05-05
   description: >
@@ -69,8 +69,8 @@
   thumbnail_url: galNum-galFly.png
   source_url: https://github.com/DrummerHead/galNum-galFly
   color:
-    seed: 'rgb(180, 204, 4)'
-    value: 'rgb(243, 246, 218)'
+    seed: 'rgb(110, 255, 0)'
+    value: 'rgb(234, 250, 221)'
   date_published: 2014-02-20
   date_modified: 2016-07-05
   description: |
@@ -87,7 +87,7 @@
   thumbnail_url: font-viewer.png
   source_url: https://github.com/DrummerHead/font-viewer
   color:
-    seed: 'rgb(252, 225, 13)'
+    seed: 'rgb(255, 222, 0)'
     value: 'rgb(247, 244, 219)'
   date_published: 2013-11-20
   date_modified: 2014-04-04
@@ -135,8 +135,8 @@
   thumbnail_url: bouncing-rainbow.png
   source_url: https://github.com/DrummerHead/bouncing-rainbow
   color:
-    seed: 'rgb(84, 77, 252)'
-    value: 'rgb(240, 239, 255)'
+    seed: 'rgb(244, 66, 4)'
+    value: 'rgb(255, 236, 227)'
   date_published: 2012-10-08
   date_modified: 2012-10-08
   description: |
@@ -211,14 +211,14 @@
     Responsive Web Design is all about having the same content visible in all devices, from tiny mobiles to huge monitors, preserving proper readability and adapting to the medium. In this talk I will present the concept of responsiveness and teach with examples how to make a layout responsive with the one-two punch of fluid layouts and media queries.
 
 -
-  id: de-sijl
+  id: de-stijl
   title: De Stijl
   url: /de-stijl/
   thumbnail_url: de-stijl.png
   source_url: 
   color:
-    seed: 'rgb(251, 12, 4)'
-    value: 'rgb(255, 234, 233)'
+    seed: 'rgb(0, 0, 255)'
+    value: 'rgb(239, 239, 255)'
   date_published: 2012-01-03
   date_modified: 2012-01-03
   description: |
@@ -275,8 +275,8 @@
   thumbnail_url: utf-8.png
   source_url: https://github.com/DrummerHead/UTF-8-Character-list
   color:
-    seed: 'rgb(192, 176, 203)'
-    value: 'rgb(251, 234, 255)'
+    seed: 'rgb(223, 250, 254)'
+    value: 'rgb(223, 250, 254)'
   date_published: 2011-10-12
   date_modified: 2012-09-15
   description: |
@@ -354,8 +354,8 @@
   thumbnail_url: key-sheet.jpg
   source_url: https://github.com/DrummerHead/HTML-Keyboard
   color:
-    seed: 'rgb(202, 210, 212)'
-    value: 'rgb(223, 249, 255)'
+    seed: 'rgb(221, 252, 248)'
+    value: 'rgb(221, 252, 248)'
   date_published: 2011-09-09
   date_modified: 2013-06-16
   description: |
@@ -454,8 +454,8 @@
   thumbnail_url: tv-color-bars.png
   source_url: 
   color:
-    seed: 'rgb(255, 0, 0)'
-    value: 'rgb(255, 233, 233)'
+    seed: 'rgb(0, 255, 0)'
+    value: 'rgb(227, 253, 227)'
   date_published: 2010-08-01
   date_modified: 2010-08-01
   description: |
@@ -502,7 +502,7 @@
   thumbnail_url: bsod.png
   source_url: 
   color:
-    seed: 'rgb(4, 4, 172)'
+    seed: 'rgb(2, 2, 172)'
     value: 'rgb(239, 239, 255)'
   date_published: 2010-05-30
   date_modified: 2010-05-30
