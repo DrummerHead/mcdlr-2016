@@ -10,30 +10,36 @@
   </div>
   <% date_modified_is_different = article.date_published != article.date_modified %>
   <footer>
-    <ol>
+    <ol class='article-meta'>
       <li>
-        <%= link_to 'Source code', article.source_url %>
+        OSS
+        <strong>
+          <%= link_to "#{article.title} Source code", article.source_url %>
+        </strong>
       </li>
       <li>
-        Created on
-        <time datetime='<%= article.date_published %>' itemprop='datePublished'><%= article.date_published %></time>
-        <% if !date_modified_is_different %>
+        Created
+        <strong>
+          <time datetime='<%= article.date_published %>' itemprop='datePublished'><%= article.date_published %></time>
+        </strong>
+        <% if date_modified_is_different %>
+          Updated
+          <strong>
+            <time datetime='<%= article.date_modified %>' itemprop='dateModified'><%= article.date_modified %></time>
+          </strong>
+        <% else %>
           <meta itemprop='dateModified' content='<%= article.date_modified %>'>
         <% end %>
       </li>
-      <% if date_modified_is_different %>
-        <li>
-          Last update on
-          <time datetime='<%= article.date_modified %>' itemprop='dateModified'><%= article.date_modified %></time>
-        </li>
-      <% end %>
       <li>
-        Author is
-        <address itemprop='author' itemscope itemtype='https://schema.org/Person'>
-          <a href="http://drummerhead.me/" itemprop='url'>
-            <span itemprop='name'>DrummerHead</span>
-          </a>
-        </address>
+        Author
+        <strong>
+          <address itemprop='author' itemscope itemtype='https://schema.org/Person'>
+            <a href="http://drummerhead.me/" itemprop='url'>
+              <span itemprop='name'>DrummerHead</span>
+            </a>
+          </address>
+        </strong>
       </li>
     </ol>
   <footer>

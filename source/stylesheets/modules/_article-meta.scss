@@ -1,0 +1,26 @@
+.article-meta {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.article-meta li {
+  flex: 1;
+  border-left: .15rem solid rgba(0, 0, 0, .2);
+  font-size: .8rem;
+  line-height: 1.2;
+  padding: 0 .3rem 0 .5rem;
+}
+
+.article-meta strong {
+  display: block;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0 0 .5em;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+.article-meta address {
+  font-style: normal;
+}

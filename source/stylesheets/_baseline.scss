@@ -29,3 +29,10 @@ h2 a {
   text-decoration: none;
   color: $root-font-color;
 }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
