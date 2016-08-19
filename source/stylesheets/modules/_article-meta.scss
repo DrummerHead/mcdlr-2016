@@ -5,22 +5,23 @@
 
 .article-meta li {
   flex: 1;
-  border-left: .15rem solid rgba(0, 0, 0, .2);
+  border-left: .15rem solid $chameleon-light;
+  padding: 0 .5rem;
   font-size: .8rem;
   line-height: 1.2;
-  padding: 0 .3rem 0 .5rem;
 }
 
 .article-meta strong {
   display: block;
-  font-weight: normal;
-  font-size: 1rem;
   margin: 0 0 .5em;
+  font-size: 1rem;
+  font-weight: normal;
 
   &:last-child {
     margin: 0;
   }
 }
+
 .article-meta address {
   font-style: normal;
 }
