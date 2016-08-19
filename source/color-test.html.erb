@@ -5,7 +5,7 @@ css: color-test
 ---
 
 <main itemprop='mainContentOfPage'>
-  <ul id='color-test'>
+  <ul class='color-test'>
     <% data.articles.each do |article| %>
       <%= partial 'modules/color-test', locals: {article: article} %>
     <% end %>

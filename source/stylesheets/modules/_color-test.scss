@@ -1,36 +1,31 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.color-test {
+  display: flex;
+  flex-flow: row wrap;
 }
-#color-test {
-}
-#color-test > li {
+
+.color-test > li {
   position: relative;
-  float: left;
-  width: 33.3333333333333333333333%;
-  height: 10em;
-  background-color: red;
+  flex: 1 0 33.333333%;
 
   span {
-    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     width: 0%;
-    height: 100%;
     transition: width 500ms ease-in-out;
+    z-index: 10;
   }
 
   &:hover {
-    background-color: attr(data-color);
-
     span {
       width: 100%;
     }
   }
 }
+
 .color-data {
-  position: absolute;
-  top: 1em;
-  right: 0;
-  bottom: 0;
-  left: 1em;
+  position: relative;
+  padding: 1em;
+  z-index: 20;
 }

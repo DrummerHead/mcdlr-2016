@@ -2,7 +2,7 @@ import * as d3Color from 'd3-color';
 
 let allColors;
 
-for (const li of document.querySelectorAll('#color-test li')) {
+for (const li of document.querySelectorAll('.color-test li')) {
   const color = d3Color.cubehelix(li.dataset.colorSeed);
   const newColor = color;
   newColor.s = 1;
