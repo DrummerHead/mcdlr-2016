@@ -49,7 +49,7 @@ gulp.task('styles-minify', ['styles'], () =>
 // -----------------------
 
 gulp.task('sass-lint', () =>
-  gulp.src('source/stylesheets/*.scss')
+  gulp.src('source/stylesheets/**/*.scss')
     .pipe($.sassLint({
       configFile: '.sass-lint.yml',
     }))
