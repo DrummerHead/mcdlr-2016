@@ -3,9 +3,11 @@
 }
 
 [itemtype='https://schema.org/Article'] [itemprop='image'] {
+  display: block;
   box-shadow: none;
 }
 
 [itemtype='https://schema.org/Article'] [itemprop='image'] img {
+  display: block;
   width: 100%;
 }
