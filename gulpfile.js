@@ -169,7 +169,11 @@ gulp.task('serve', ['styles', 'watch-js'], () => {
   gulp.watch([
     'source/**/*.erb',
     'data/*.yml',
-  ]).on('change', () => setTimeout(() => reload(), 1500));
+  ]).on('change', () => setTimeout(reload, 2000));
+
+  gulp.watch([
+    '.tmp/stylesheets/*.css'
+  ]).on('change', reload);
 
   gulp.watch('source/stylesheets/**/*.scss', ['styles']);
 });
