@@ -6,8 +6,27 @@ css: color-test
 
 <main itemprop='mainContentOfPage'>
   <ul class='color-test'>
+    <%= partial 'modules/color-test', locals:
+      {
+        article:
+          {
+            id: 'link-color',
+            color:
+              {
+                seed: 'rgb(0, 0, 255)',
+                value: 'rgb(0, 0, 255)'
+              }
+          },
+          ilk: 'site-colors'
+      }
+    %>
     <% data.articles.each do |article| %>
-      <%= partial 'modules/color-test', locals: {article: article} %>
+      <%= partial 'modules/color-test', locals:
+        {
+          article: article,
+          ilk: 'article-colors'
+        }
+      %>
     <% end %>
   </ul>
 </main>
