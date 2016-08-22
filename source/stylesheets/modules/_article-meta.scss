@@ -1,9 +1,9 @@
 .article-meta {
-  @extend .grid-row;
+  @extend %grid-row;
 }
 
 .article-meta li {
-  @extend .grid-col;
+  @extend %grid-col;
   font-size: .8rem;
   line-height: 1.2;
 }
