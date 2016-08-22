@@ -19,19 +19,19 @@ body {
 // TODO: Handle commented code for non-touch devices later
 a {
   text-decoration: none;
-  box-shadow: 0 -.1em 0 $hypertext inset, 0 .1em 0 $hypertext;
   color: $root-font-color;
-//  transition: box-shadow ease-in 100ms;
+  box-shadow: 0 -.1em 0 $hypertext inset, 0 .1em 0 $hypertext;
+  //transition: box-shadow ease-in 100ms;
 
   &:visited {
     color: $root-font-color;
   }
-//  &:hover {
-//    box-shadow: 0 -1.4em 0 $hypertext inset, 0 .1em 0 $hypertext;
-//  }
-//  &:active {
-//    color: red;
-//  }
+  //&:hover {
+  //  box-shadow: 0 -1.4em 0 $hypertext inset, 0 .1em 0 $hypertext;
+  //}
+  //&:active {
+  //  color: red;
+  //}
 }
 
 h2 {
@@ -41,11 +41,12 @@ h2 {
   font-family: 'Heading';
   font-weight: bold;
   font-style: italic;
+  hyphens: none;
 }
 
 h2 a {
-  box-shadow: none;
   color: $root-font-color;
+  box-shadow: none;
 }
 
 ul,
