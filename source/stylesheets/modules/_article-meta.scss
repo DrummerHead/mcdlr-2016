@@ -1,12 +1,9 @@
 .article-meta {
-  display: flex;
-  flex-flow: row nowrap;
+  @extend .grid-row;
 }
 
 .article-meta li {
-  flex: 1;
-  border-left: .15rem solid $chameleon-light;
-  padding: 0 .5rem;
+  @extend .grid-col;
   font-size: .8rem;
   line-height: 1.2;
 }
