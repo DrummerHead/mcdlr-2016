@@ -57,6 +57,8 @@ gulp.task('sass-lint', () =>
     .pipe($.sassLint.failOnError())
 );
 
+gulp.task('scss-lint', ['sass-lint'])
+
 
 // JavaScript
 // =======================
