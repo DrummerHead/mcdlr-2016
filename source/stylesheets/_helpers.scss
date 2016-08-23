@@ -14,3 +14,16 @@ $grid-separation: .25rem;
   flex: 1;
   padding: 0 $grid-separation;
 }
+
+// Lists
+////////////////////////
+
+%list {
+  padding-left: 1.2em;
+  list-style-type: disc;
+}
+
+%list-li {
+  margin: .5em 0;
+}
+

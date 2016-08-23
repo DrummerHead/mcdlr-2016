@@ -1,6 +1,7 @@
 [itemtype='https://schema.org/Article'] {
   padding: 2rem $base-lateral-padding;
   hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 [itemtype='https://schema.org/Article'] [itemprop='image'] {
@@ -11,4 +12,13 @@
 [itemtype='https://schema.org/Article'] [itemprop='image'] img {
   display: block;
   width: 100%;
+}
+
+[itemprop='articleBody'] ol,
+[itemprop='articleBody'] ul {
+  @extend %list;
+}
+
+[itemprop='articleBody'] li {
+  @extend %list-li;
 }
