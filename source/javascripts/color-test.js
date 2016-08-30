@@ -6,9 +6,9 @@ let allColors;
 // color.s is saturation, from 0.0 to 2.0
 // color.l is lightness, from 0.0 to 1.0
 
-const colorTest = ({element, saturation, lightness}) => {
+const colorTest = ({ element, saturation, lightness }) => {
   const color = d3Color.cubehelix(element.dataset.colorSeed);
-  let newColor = color;
+  const newColor = color;
   newColor.s = saturation;
   newColor.l = lightness;
 
@@ -31,17 +31,27 @@ const colorTest = ({element, saturation, lightness}) => {
   element.insertAdjacentHTML('beforeend', data);
 
   element.setAttribute('style', `background-color: ${newColor.rgb()}`);
-}
+};
 
 for (const li of document.querySelectorAll('.site-colors')) {
-  colorTest({element: li, saturation: 1, lightness: 0.5});
+  colorTest({ element: li, saturation: 1, lightness: 0.5 });
 }
 
 for (const li of document.querySelectorAll('.article-colors')) {
-  colorTest({element: li, saturation: 1, lightness: 0.95});
+  colorTest({ element: li, saturation: 1, lightness: 0.95 });
 }
 
-document.querySelector('#link-color .color-data').setAttribute('style', `color: ${(() => {let c = d3Color.cubehelix("rgb(0,0,255)"); c.s = 1; c.l = .95; return c.rgb().toString()})()}`);
+document
+  .querySelector('#link-color .color-data')
+  .setAttribute(
+    'style',
+    `color: ${(() => {
+      const c = d3Color.cubehelix('rgb(0,0,255)');
+      c.s = 1;
+      c.l = 0.95;
+      return c.rgb().toString();
+    })()}`
+  );
 
 // So from the console you `copy(allColors)`
 window.allColors = allColors;
