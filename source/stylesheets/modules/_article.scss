@@ -1,5 +1,9 @@
+[itemprop='mainContentOfPage'] {
+  margin: 0 $base-lateral-padding;
+}
+
 [itemtype='https://schema.org/Article'] {
-  padding: 2rem $base-lateral-padding;
+  padding: 2.5rem 0;
   hyphens: auto;
   overflow-wrap: break-word;
 }
@@ -21,4 +25,16 @@
 
 [itemprop='articleBody'] li {
   @extend %list-li;
+}
+
+@media ($alpha) {
+  [itemprop='mainContentOfPage'] {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  [itemtype='https://schema.org/Article'] {
+    flex: 0 0 (50% - $base-lateral-padding / 2);
+  }
 }
