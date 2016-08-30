@@ -38,12 +38,10 @@ class ColorState {
   }
 
   changeColor() {
-    console.log('scroll');
     const viewportYPosition = this.window.scrollY;
     for (const [i, article] of this.articles.entries()) {
       if (this.isScrollingOnTheArticle(i, viewportYPosition)) {
         this.lastArticle = article.id;
-        console.log(`article.id: ${article.id}`);
         this.document.body.setAttribute('style', `background-color: ${article.color}`);
         break;
       }
@@ -51,7 +49,6 @@ class ColorState {
   }
 
   updateLayoutData() {
-    console.log('resize');
     this.setArticlesPositions();
     this.setDelta();
     this.changeColor();
@@ -59,14 +56,6 @@ class ColorState {
 
   init() {
     this.updateLayoutData();
-
-    // TODO: remove this for statement after done developing
-    for (const article of this.articles) {
-      const h2 = this.document.querySelector(`#${article.id} h2`);
-      if (h2) {
-        h2.setAttribute('style', `background-color: ${article.color}`);
-      }
-    }
 
     this.window.addEventListener(
       'scroll',
