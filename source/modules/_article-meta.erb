@@ -1,0 +1,36 @@
+<ol class='article-meta'>
+
+  <li>
+    OSS
+    <strong>
+      <%= link_to "#{article.title} Source code", article.source_url %>
+    </strong>
+  </li>
+
+  <li>
+    Created
+    <strong>
+      <time datetime='<%= article.date_published %>' itemprop='datePublished'><%= article.date_published %></time>
+    </strong>
+    <% if article.date_published != article.date_modified %>
+      Updated
+      <strong>
+        <time datetime='<%= article.date_modified %>' itemprop='dateModified'><%= article.date_modified %></time>
+      </strong>
+    <% else %>
+      <meta itemprop='dateModified' content='<%= article.date_modified %>'>
+    <% end %>
+  </li>
+
+  <li>
+    Author
+    <strong>
+      <address itemprop='author' itemscope itemtype='https://schema.org/Person'>
+        <a href="http://drummerhead.me/" itemprop='url'>
+          <span itemprop='name'>DrummerHead</span>
+        </a>
+      </address>
+    </strong>
+  </li>
+
+</ol>

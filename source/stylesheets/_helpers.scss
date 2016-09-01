@@ -2,6 +2,7 @@
 ////////////////////////
 
 $grid-separation: .25rem;
+$grid-separation-wider: .75rem;
 
 %grid-row {
   display: flex;
@@ -14,6 +15,17 @@ $grid-separation: .25rem;
   flex: 1;
   padding: 0 $grid-separation;
 }
+
+@media ($alpha) {
+  %grid-row {
+    margin-right: (-$grid-separation-wider);
+    margin-left: (-$grid-separation-wider);
+  }
+  %grid-col {
+    padding: 0 $grid-separation-wider;
+  }
+}
+
 
 // Lists
 ////////////////////////

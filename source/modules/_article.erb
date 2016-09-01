@@ -1,46 +1,20 @@
 <article id='<%= article.id %>' itemscope itemtype='https://schema.org/Article' data-color='<%= article.color.value %>'>
+
   <h2 itemprop='headline'><%= link_to article.title, article.url, itemprop: 'mainEntityOfPage' %></h2>
+
   <% link_to article.url, itemprop: 'image', itemscope: '', itemtype: 'http://schema.org/ImageObject' do %>
     <%= image_tag "/images/thumbnails/#{article.thumbnail_url}", itemprop: 'url', alt: "Thumbnail for #{article.title}" %>
     <meta itemprop='width' content='300'>
     <meta itemprop='height' content='187'>
   <% end %>
-  <div itemprop='articleBody'>
-    <%= markdown article.description %>
+
+  <div class='article-textcontent'>
+    <div itemprop='articleBody'>
+      <%= markdown article.description %>
+    </div>
+    <footer>
+      <%= partial 'modules/article-meta', locals: {article: article} %>
+    <footer>
   </div>
-  <% date_modified_is_different = article.date_published != article.date_modified %>
-  <footer>
-    <ol class='article-meta'>
-      <li>
-        OSS
-        <strong>
-          <%= link_to "#{article.title} Source code", article.source_url %>
-        </strong>
-      </li>
-      <li>
-        Created
-        <strong>
-          <time datetime='<%= article.date_published %>' itemprop='datePublished'><%= article.date_published %></time>
-        </strong>
-        <% if date_modified_is_different %>
-          Updated
-          <strong>
-            <time datetime='<%= article.date_modified %>' itemprop='dateModified'><%= article.date_modified %></time>
-          </strong>
-        <% else %>
-          <meta itemprop='dateModified' content='<%= article.date_modified %>'>
-        <% end %>
-      </li>
-      <li>
-        Author
-        <strong>
-          <address itemprop='author' itemscope itemtype='https://schema.org/Person'>
-            <a href="http://drummerhead.me/" itemprop='url'>
-              <span itemprop='name'>DrummerHead</span>
-            </a>
-          </address>
-        </strong>
-      </li>
-    </ol>
-  <footer>
+
 </article>
