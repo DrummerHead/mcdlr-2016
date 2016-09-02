@@ -39,6 +39,10 @@
     flex-flow: row wrap;
     padding-top: 7rem;
     font-size: 1.2em;
+
+    &:first-child {
+      padding-top: 2em;
+    }
   }
 
   [itemprop='headline'] {
@@ -51,7 +55,13 @@
   }
 
   .article-textcontent {
+    display: flex;
+    flex-flow: column nowrap;
     flex: 1 0 22rem;
     padding: 0 0 0 ($base-lateral-padding / 2);
+  }
+
+  .article-textcontent > footer {
+    margin-top: auto;
   }
 }

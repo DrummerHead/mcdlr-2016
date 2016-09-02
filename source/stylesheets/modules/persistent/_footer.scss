@@ -1,8 +1,8 @@
 [itemtype='https://schema.org/WPFooter'] {
-  border-top: 2em solid rgba($body-default-bg-color, .5);
+  border-top: $persistent-border;
   padding: 1em $base-lateral-padding;
   background-clip: padding-box;
-  background-color: $body-default-bg-color;
+  background-color: $mcdlr-canon-color;
 }
 
 .copyright {

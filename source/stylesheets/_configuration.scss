@@ -1,17 +1,19 @@
-// Layout
-////////////////////////
-
-$base-lateral-padding: 4.4vw;
-
-
 // Color scheme
 ////////////////////////
 
 $root-font-color: #222;
-$body-default-bg-color: #defbfd;
+$mcdlr-canon-color: #defbfd;
+$body-default-bg-color: rgb(248, 243, 219);
 $chameleon-light: rgba(0, 0, 0, .2);
 $hypertext: rgba(112, 112, 253, .5);
 $hypertext-hover-color: rgb(239, 239, 255);
+
+// Layout
+////////////////////////
+
+$base-lateral-padding: 4.4vw;
+$persistent-border: 2em solid rgba($mcdlr-canon-color, .5);
+
 
 // Viewport sizes
 ////////////////////////

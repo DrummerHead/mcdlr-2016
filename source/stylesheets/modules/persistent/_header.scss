@@ -1,5 +1,55 @@
 [itemtype='https://schema.org/WPHeader'] {
   display: flex;
   flex-flow: column nowrap;
+  align-items: flex-start;
   max-height: 100vh;
+  background-clip: padding-box;
+}
+
+$initial-delay: 2000ms;
+$intermediate-delay: 150ms;
+$header-duration: 600ms;
+$svg-duration: 450ms;
+
+@media ($alpha) {
+  [itemtype='https://schema.org/WPHeader'] {
+    animation-name: egress-header;
+    animation-duration: $header-duration;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-delay: $initial-delay;
+  }
+
+  [itemtype='https://schema.org/WPHeader'] svg {
+    animation-name: egress-svg;
+    animation-duration: $svg-duration;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: $initial-delay + $intermediate-delay + $header-duration;
+  }
+}
+
+@keyframes egress-header {
+  0% {
+    max-height: 100vh;
+    border-bottom: 0 solid rgba($mcdlr-canon-color, 0);
+    background-color: $body-default-bg-color;
+  }
+
+  100% {
+    max-height: 10rem;
+    border-bottom: $persistent-border;
+    padding: 1em $base-lateral-padding;
+    background-color: $mcdlr-canon-color;
+  }
+}
+
+@keyframes egress-svg {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 10.4rem;
+  }
 }
