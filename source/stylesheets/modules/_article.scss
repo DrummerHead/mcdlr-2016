@@ -15,11 +15,13 @@
 }
 
 .article-textcontent {
-  padding: 1em 0 0 0;
+  padding: 1em 0 0;
 }
 
-[itemprop='articleBody'] > *:first-child {
-  margin-top: 0;
+[itemprop='articleBody'] > * {
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 [itemprop='articleBody'] ol,
@@ -36,6 +38,7 @@
     display: flex;
     flex-flow: row wrap;
     padding-top: 7rem;
+    font-size: 1.2em;
   }
 
   [itemprop='headline'] {
@@ -44,11 +47,11 @@
   }
 
   [itemtype='https://schema.org/Article'] [itemprop='image'] {
-    flex: 0 0 18.77em;
+    flex: 0 0 18.77rem;
   }
 
   .article-textcontent {
-    flex: 1 0 22em;
+    flex: 1 0 22rem;
     padding: 0 0 0 ($base-lateral-padding / 2);
   }
 }

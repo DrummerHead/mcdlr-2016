@@ -21,6 +21,7 @@ $grid-separation-wider: .75rem;
     margin-right: (-$grid-separation-wider);
     margin-left: (-$grid-separation-wider);
   }
+
   %grid-col {
     padding: 0 $grid-separation-wider;
   }

@@ -22,3 +22,9 @@
 .article-meta address {
   font-style: normal;
 }
+
+@media ($alpha) {
+  .article-meta {
+    padding-top: 1em;
+  }
+}
