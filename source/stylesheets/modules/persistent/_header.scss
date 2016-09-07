@@ -3,16 +3,34 @@
   flex-flow: column nowrap;
   align-items: flex-start;
   max-height: 100vh;
+  border-bottom: 0 solid rgba($mcdlr-canon-color, 0);
+  padding: 0;
   background-clip: padding-box;
+  background-color: $body-default-bg-color;
 }
 
-$initial-delay: 2000ms;
+[itemtype='https://schema.org/WPHeader'] svg {
+  width: 100%;
+}
+
+$initial-delay: 1000ms;
 $intermediate-delay: 150ms;
 $header-duration: 600ms;
 $svg-duration: 450ms;
 
+@mixin endstate-header {
+  max-height: 10rem;
+  border-bottom: $persistent-border;
+  padding: 1em $base-lateral-padding;
+  background-color: $mcdlr-canon-color;
+}
+
+@mixin endstate-svg {
+  width: 10.4rem;
+}
+
 @media ($alpha) {
-  [itemtype='https://schema.org/WPHeader'] {
+  .welcome-animation {
     animation-name: egress-header;
     animation-duration: $header-duration;
     animation-timing-function: ease-in;
@@ -20,36 +38,31 @@ $svg-duration: 450ms;
     animation-delay: $initial-delay;
   }
 
-  [itemtype='https://schema.org/WPHeader'] svg {
+  .welcome-animation svg {
     animation-name: egress-svg;
     animation-duration: $svg-duration;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
-    animation-delay: $initial-delay + $intermediate-delay + $header-duration;
+    animation-delay: $initial-delay + $header-duration + $intermediate-delay;
+  }
+
+  .endstate-animation {
+    @include endstate-header;
+  }
+
+  .endstate-animation svg {
+    @include endstate-svg;
   }
 }
 
 @keyframes egress-header {
-  0% {
-    max-height: 100vh;
-    border-bottom: 0 solid rgba($mcdlr-canon-color, 0);
-    background-color: $body-default-bg-color;
-  }
-
   100% {
-    max-height: 10rem;
-    border-bottom: $persistent-border;
-    padding: 1em $base-lateral-padding;
-    background-color: $mcdlr-canon-color;
+    @include endstate-header;
   }
 }
 
 @keyframes egress-svg {
-  0% {
-    width: 100%;
-  }
-
   100% {
-    width: 10.4rem;
+    @include endstate-svg;
   }
 }

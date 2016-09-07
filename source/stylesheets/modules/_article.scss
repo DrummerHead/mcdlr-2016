@@ -1,7 +1,15 @@
 [itemtype='https://schema.org/Article'] {
-  padding: 2.5rem $base-lateral-padding;
+  padding: .5rem $base-lateral-padding 5rem;
   hyphens: auto;
   overflow-wrap: break-word;
+
+  &:first-child {
+    padding-top: 2.5rem;
+  }
+
+  &:last-child {
+    padding-bottom: 2rem;
+  }
 }
 
 [itemtype='https://schema.org/Article'] [itemprop='image'] {
@@ -37,11 +45,11 @@
   [itemtype='https://schema.org/Article'] {
     display: flex;
     flex-flow: row wrap;
-    padding-top: 7rem;
+    padding-bottom: 10rem;
     font-size: 1.2em;
 
     &:first-child {
-      padding-top: 2em;
+      padding-top: 2rem;
     }
   }
 
