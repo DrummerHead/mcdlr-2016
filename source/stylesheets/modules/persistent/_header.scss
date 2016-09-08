@@ -1,8 +1,7 @@
 [itemtype='https://schema.org/WPHeader'] {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   align-items: flex-start;
-  max-height: 100vh;
   border-bottom: 0 solid rgba($mcdlr-canon-color, 0);
   padding: 0;
   background-clip: padding-box;
@@ -10,23 +9,23 @@
 }
 
 [itemtype='https://schema.org/WPHeader'] svg {
-  width: 100%;
+  flex: 0 0 100%;
+  max-height: 100vh;
 }
 
-$initial-delay: 1000ms;
-$intermediate-delay: 150ms;
-$header-duration: 600ms;
-$svg-duration: 450ms;
+$initial-delay: 200ms;
+$header-duration: 650ms;
+$svg-duration: 1250ms;
 
 @mixin endstate-header {
-  max-height: 10rem;
   border-bottom: $persistent-border;
   padding: 1em $base-lateral-padding;
   background-color: $mcdlr-canon-color;
 }
 
 @mixin endstate-svg {
-  width: 10.4rem;
+  max-height: 7rem;
+  flex-basis: 12.2rem;
 }
 
 @media ($alpha) {
@@ -43,7 +42,7 @@ $svg-duration: 450ms;
     animation-duration: $svg-duration;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
-    animation-delay: $initial-delay + $header-duration + $intermediate-delay;
+    animation-delay: $initial-delay;
   }
 
   .endstate-animation {
@@ -62,6 +61,12 @@ $svg-duration: 450ms;
 }
 
 @keyframes egress-svg {
+  55% {
+    max-height: 7rem;
+  }
+  65% {
+    flex-basis: 100%;
+  }
   100% {
     @include endstate-svg;
   }
