@@ -1,11 +1,13 @@
 [itemtype='https://schema.org/WPHeader'] {
   display: flex;
   flex-flow: row nowrap;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: flex-end;
   border-bottom: 0 solid rgba($mcdlr-canon-color, 0);
   padding: 0;
   background-clip: padding-box;
   background-color: $body-default-bg-color;
+  overflow: hidden;
 }
 
 [itemtype='https://schema.org/WPHeader'] svg {
@@ -24,8 +26,8 @@ $svg-duration: 1250ms;
 }
 
 @mixin endstate-svg {
-  max-height: 7rem;
   flex-basis: 12.2rem;
+  max-height: 7rem;
 }
 
 @media ($alpha) {
@@ -64,9 +66,11 @@ $svg-duration: 1250ms;
   55% {
     max-height: 7rem;
   }
+
   65% {
     flex-basis: 100%;
   }
+
   100% {
     @include endstate-svg;
   }

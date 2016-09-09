@@ -1,0 +1,23 @@
+.quip {
+  display: none;
+}
+
+@media ($alpha) {
+  .quip {
+    display: block;
+    flex: 1 1 0%;
+    padding: 0 0 .1rem 2.5em;
+    transform: translateX(107%);
+    text-align: right;
+    animation-name: slideIn;
+    animation-duration: 400ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateX(0);
+  }
+}
