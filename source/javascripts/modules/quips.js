@@ -1,9 +1,8 @@
+import quipsContent from './quipsContent';
+
 class Quips {
   constructor() {
-    this.quips = [
-      '',
-    ];
-
+    this.quips = quipsContent;
     this.length = this.quips.length;
   }
 
