@@ -73,3 +73,9 @@
     margin-top: auto;
   }
 }
+
+@media ($beta) {
+  [itemtype='https://schema.org/Article'] {
+    @include beta-lateral-padding-pack;
+  }
+}

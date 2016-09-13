@@ -8,15 +8,47 @@ $chameleon-light: rgba(0, 0, 0, .2);
 $hypertext: rgba(112, 112, 253, .5);
 $hypertext-hover-color: rgb(239, 239, 255);
 
+
+// Viewport sizes
+////////////////////////
+
+$alpha-width: '50em';
+$alpha: 'min-width: #{$alpha-width}';
+
+$beta-width: 95em;
+$beta: 'min-width: #{$beta-width}';
+
+
 // Layout
 ////////////////////////
 
 $base-lateral-padding: 4.4vw;
 $persistent-border: 2em solid rgba($mcdlr-canon-color, .5);
 
+$beta-element-effective-width: ($beta-width * (100vw - $base-lateral-padding * 2) / 100vw) / 1em * 1rem;
+$beta-lateral-padding: calc((100vw - #{$beta-element-effective-width}) / 2);
 
-// Viewport sizes
-////////////////////////
 
-$alpha: 'min-width: 50em';
+//                      100vw
+// ────────────────────────────────────────────────
+// ┼───────┼ ┼──────────────────────────┼ ┼───────┼
+//   4.4vw              91.2vw              4.4vw
+//
+//
+//                       95em
+// ────────────────────────────────────────────────
+// ┼───────┼ ┼──────────────────────────┼ ┼───────┼
+//   4.4vw              91.2vw              4.4vw
+//
+//       95em - 100vw
+//       X em - 91.2vw
+//
+//         X = 86.64em
+//
+//                      100vw
+// ────────────────────────────────────────────────
+// ┼───────┼ ┼──────────────────────────┼ ┼───────┼
+//   Y vw               86.64em             Y vw
+//
+//        Y = (100vw - 86.64em) / 2
 

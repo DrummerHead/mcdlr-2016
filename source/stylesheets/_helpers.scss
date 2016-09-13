@@ -40,3 +40,11 @@ $grid-separation-wider: .75rem;
   margin: .5em 0;
 }
 
+// Meta beta
+////////////////////////
+
+@mixin beta-lateral-padding-pack {
+  padding-right: $beta-lateral-padding;
+  padding-left: $beta-lateral-padding;
+}
+

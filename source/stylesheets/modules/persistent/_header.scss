@@ -19,9 +19,12 @@ $initial-delay: 200ms;
 $header-duration: 650ms;
 $svg-duration: 1250ms;
 
-@mixin endstate-header {
+@mixin endstate-header($lateral-padding) {
   border-bottom: $persistent-border;
-  padding: 1em $base-lateral-padding;
+  padding-top: 1em;
+  padding-right: $lateral-padding;
+  padding-bottom: 1em;
+  padding-left: $lateral-padding;
   background-color: $mcdlr-canon-color;
 }
 
@@ -48,30 +51,42 @@ $svg-duration: 1250ms;
   }
 
   .endstate-animation {
-    @include endstate-header;
+    @include endstate-header($base-lateral-padding);
   }
 
   .endstate-animation svg {
     @include endstate-svg;
   }
-}
 
-@keyframes egress-header {
-  100% {
-    @include endstate-header;
+  @keyframes egress-header {
+    100% {
+      @include endstate-header($base-lateral-padding);
+    }
+  }
+
+  @keyframes egress-svg {
+    55% {
+      max-height: 7rem;
+    }
+
+    65% {
+      flex-basis: 100%;
+    }
+
+    100% {
+      @include endstate-svg;
+    }
   }
 }
 
-@keyframes egress-svg {
-  55% {
-    max-height: 7rem;
+@media ($beta) {
+  .endstate-animation {
+    @include beta-lateral-padding-pack;
   }
 
-  65% {
-    flex-basis: 100%;
-  }
-
-  100% {
-    @include endstate-svg;
+  @keyframes egress-header {
+    100% {
+      @include endstate-header($beta-lateral-padding);
+    }
   }
 }
