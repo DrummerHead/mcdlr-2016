@@ -31,7 +31,6 @@ gulp.task('styles', () =>
     .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/stylesheets'))
-    .pipe(reload({ stream: true }))
 );
 
 
