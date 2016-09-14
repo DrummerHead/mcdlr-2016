@@ -11,8 +11,9 @@
 }
 
 [itemtype='https://schema.org/WPHeader'] svg {
-  flex: 0 0 100%;
+  flex: 0 1 auto;
   max-height: 100vh;
+  width: 100%;
 }
 
 $initial-delay: 200ms;
@@ -29,7 +30,7 @@ $svg-duration: 1250ms;
 }
 
 @mixin endstate-svg {
-  flex-basis: 12.2rem;
+  width: 12.2rem;
   max-height: 7rem;
 }
 
@@ -70,7 +71,7 @@ $svg-duration: 1250ms;
     }
 
     65% {
-      flex-basis: 100%;
+      width: 100%;
     }
 
     100% {
