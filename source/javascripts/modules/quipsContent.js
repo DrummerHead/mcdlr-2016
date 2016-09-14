@@ -5,7 +5,7 @@ const quipsContent = [
   'Meteor apps in the cloud!',
   'Even NASA uses JavaScript now!',
   'You have more power than you know',
-  "hostElement.insertAdjacentHTML('beforeend', `<div class='quip'>${this.randomQuip()}</div>`)",
+  "hostElement.insertAdjacentHTML('beforeend', `&#60;div class='quip'&#62;${this.randomQuip()}&#60;/div&#62;`)",
   'Only 90’s kids remember XHTML 1.0 Strict',
   'Remember the IE6 float double margin bug? Front–End was witchcraft!',
   'Flex my box in a generator function',
