@@ -364,7 +364,8 @@
 -
   id: css-reload
   title: CSS Reload
-  url: 'javascript:(function(){ $(document).ready(function(){ $(&quot;link[rel="stylesheet"]&quot;).each(function(){ var href = $(this).attr("href"); var cssNum = /\d/.exec(href); var theOtherStuff = /^[^?]*\?/.exec(href); cssNum++; newHref = theOtherStuff + cssNum; $(this).attr("href",newHref); }); }); })();'
+  url-legacy: 'javascript:(function(){ $(document).ready(function(){ $(&quot;link[rel="stylesheet"]&quot;).each(function(){ var href = $(this).attr("href"); var cssNum = /\d/.exec(href); var theOtherStuff = /^[^?]*\?/.exec(href); cssNum++; newHref = theOtherStuff + cssNum; $(this).attr("href",newHref); }); }); })();'
+  url: 'javascript%3A(function()%7B%24(document).ready(function()%7B%24(%27link%5Brel%3D%22stylesheet%22%5D%27).each(function()%7Bvar%20href%3D%24(this).attr(%22href%22)%3Bvar%20cssNum%3D%2Fd%2F.exec(href)%3Bvar%20theOtherStuff%3D%2F%5E%5B%5E%3F%5D*%3F%2F.exec(href)%3BcssNum%2B%2B%3BnewHref%3DtheOtherStuff%2BcssNum%3B%24(this).attr(%22href%22%2CnewHref)%3B%7D)%3B%7D)%3B%7D)()%3B%0A'
   thumbnail_url: wwwToBeta.png
   source_url: 
   color:
