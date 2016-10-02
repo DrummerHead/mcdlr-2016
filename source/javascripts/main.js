@@ -1,5 +1,6 @@
 import ColorState from './modules/colorState';
 import Quip from './modules/quips';
+import ga from './modules/googleAnalytics';
 // import showWidthInEms from './modules/showWidthInEms';
 
 // showWidthInEms(window);
@@ -24,3 +25,5 @@ window.addEventListener('load', () => {
     header.classList.remove('welcome-animation');
   });
 });
+
+ga('UA-1030009-5');
