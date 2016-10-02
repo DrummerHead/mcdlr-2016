@@ -159,14 +159,14 @@ gulp.task('gulpfile-lint', jsLint('gulpfile.js'));
 gulp.task('inline-sources', () =>
   gulp.src('./build/index.html')
     .pipe($.replace(
-      /inline="" \//,
+      /inline=""/g,
       'inline'
     ))
     .pipe($.inlineSource())
     .pipe(gulp.dest('./build'))
 );
 
-gulp.task('delete-inlined-files', ['inline-sources'], del.bind(null, ['./build/stylesheets']));
+gulp.task('delete-inlined-files', ['inline-sources'], del.bind(null, ['./build/stylesheets', './build/javascripts']));
 
 gulp.task('html-minify', ['delete-inlined-files'], () =>
   gulp.src('build/*.html')

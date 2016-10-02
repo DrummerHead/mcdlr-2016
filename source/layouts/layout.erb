@@ -12,7 +12,7 @@
   <body itemscope itemtype='https://schema.org/WebPage'>
     <%= yield %>
     <div id='scripts'>
-      <%= javascript_include_tag current_page.data.js %>
+      <%= javascript_include_tag current_page.data.js, inline: '' %>
       <script async src='https://www.google-analytics.com/analytics.js'></script>
     </div>
   </body>
