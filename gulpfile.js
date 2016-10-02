@@ -56,7 +56,7 @@ gulp.task('sass-lint', () =>
     .pipe($.sassLint.failOnError())
 );
 
-gulp.task('scss-lint', ['sass-lint'])
+gulp.task('scss-lint', ['sass-lint']);
 
 
 // JavaScript
@@ -150,6 +150,31 @@ gulp.task('js-lint', jsLint('source/javascripts/**/*.js'));
 gulp.task('gulpfile-lint', jsLint('gulpfile.js'));
 
 
+// HTML
+// =======================
+
+// HTML minification
+// -----------------------
+
+gulp.task('html-minify', () =>
+  gulp.src('build/*.html')
+    .pipe($.htmlmin({
+      collapseWhitespace: true,
+      quoteCharacter: "'",
+    }))
+    .pipe(gulp.dest('build'))
+);
+
+
+// HTML linting
+// -----------------------
+
+gulp.task('html-lint', () =>
+  gulp.src('build/index.html')
+    .pipe($.html())
+);
+
+
 // Helper
 // =======================
 
@@ -173,7 +198,7 @@ gulp.task('serve', ['styles', 'watch-js'], () => {
   ]).on('change', () => setTimeout(reload, 2000));
 
   gulp.watch([
-    '.tmp/stylesheets/*.css'
+    '.tmp/stylesheets/*.css',
   ]).on('change', reload);
 
   gulp.watch('source/stylesheets/**/*.scss', ['styles']);
