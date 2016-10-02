@@ -165,6 +165,15 @@ gulp.task('html-minify', () =>
     .pipe(gulp.dest('build'))
 );
 
+gulp.task('add-html-comment', ['html-minify'], () =>
+  gulp.src('build/index.html')
+    .pipe($.replace(
+      /<html lang='en'>/,
+      "<html lang='en'>\n\n<!-- Source code at https://github.com/DrummerHead/mcdlr-2016 -->\n\n"
+    ))
+    .pipe(gulp.dest('build'))
+);
+
 
 // HTML linting
 // -----------------------
@@ -209,6 +218,8 @@ gulp.task('serve', ['styles', 'watch-js'], () => {
 // =======================
 
 gulp.task('build', ['styles-minify', 'delete-extra-js']);
+
+gulp.task('post-build', ['add-html-comment']);
 
 
 // Default
