@@ -28,11 +28,12 @@
 
 # Option 1: rewrite www.example.com → example.com
 
+# http://stackoverflow.com/questions/234723/generic-htaccess-redirect-www-to-non-www
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+    RewriteBase /
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 </IfModule>
 
 
